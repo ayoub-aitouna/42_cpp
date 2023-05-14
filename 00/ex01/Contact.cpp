@@ -3,6 +3,16 @@
 Contact::Contact()
 {
 }
+
+Contact::Contact(Contact &contact_instance)
+{
+	this->m_first_name = contact_instance.m_first_name;
+	this->m_last_name = contact_instance.m_last_name;
+	this->m_nickname = contact_instance.m_nickname;
+	this->m_darkest_secret = contact_instance.m_darkest_secret;
+	this->m_phone_number =contact_instance.m_phone_number;
+}
+
 Contact::Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number)
 {
 	this->m_first_name = m_first_name;

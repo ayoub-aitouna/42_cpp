@@ -5,6 +5,7 @@
 class Contact{
 	public:
 		Contact();
+		Contact(Contact &contact);
 		Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number);
 		~Contact();
 

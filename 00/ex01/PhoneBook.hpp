@@ -2,18 +2,20 @@
 #define PHONE_BOOK_HPP
 #include "Contact.hpp"
 
-class PhoneBook{
-	public:
-		PhoneBook();
-		~PhoneBook();
-	private:
-		Contact m_contact[8];
-		int index = 0;
+class PhoneBook
+{
+public:
+	PhoneBook();
+	~PhoneBook();
 
-	public:
-		void Add(Contact new_contact);
-		void Search(int index);
-		void List();
-		void Print_Contact(int index);
+private:
+	Contact m_contact[8];
+	int index;
+
+public:
+	void Add(Contact &new_contact);
+	void Search(int index);
+	void List();
+	void Print_Contact(int index);
 };
 #endif
