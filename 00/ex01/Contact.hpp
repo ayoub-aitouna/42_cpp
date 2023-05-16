@@ -32,5 +32,8 @@ class Contact{
 
 		std::string GetPhoneNumebr();
 		void SetPhoneNumber(std::string name);
+
+		public:
+		std::string Display(int id);
 };
 #endif

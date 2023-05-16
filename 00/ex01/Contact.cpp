@@ -1,4 +1,6 @@
 #include "Contact.hpp"
+#include <sstream>
+#include <string>
 
 Contact::Contact()
 {
@@ -75,3 +77,10 @@ void Contact::SetPhoneNumber(std::string number)
 {
 	m_phone_number = number;
 }
+
+
+std::string Contact::Display(int id)
+{
+	return ("id : " + std::to_string(id) + " First Name : " + m_first_name + " Last Name : " + m_last_name + " PhoneNumber : " + m_phone_number);
+}
+

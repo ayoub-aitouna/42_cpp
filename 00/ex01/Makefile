@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = MegaPhone
+NAME = MyPhoneBook
 
 all : $(NAME)
 
