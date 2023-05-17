@@ -4,6 +4,8 @@ OBJ = $(SRC:.cpp=.o)
 
 NAME = MyPhoneBook
 
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)

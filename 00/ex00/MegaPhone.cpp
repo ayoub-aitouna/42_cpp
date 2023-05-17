@@ -17,7 +17,7 @@ int main(int ac, char **av)
 	}
 	for (int i = 1; i < ac ; i++) {
 		value = av[i];
-		for (int j = 0; j < value.length(); j++)
+		for (size_t j = 0; j < value.length(); j++)
 			result += std::toupper(value[j]);
 	}
 	std::cout << result << std::endl;

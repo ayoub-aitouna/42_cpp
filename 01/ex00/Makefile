@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = MyBank
+NAME = BraiiiiiiinnnzzzZ
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

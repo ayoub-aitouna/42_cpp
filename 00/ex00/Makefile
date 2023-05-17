@@ -4,6 +4,8 @@ OBJ = $(SRC:.cpp=.o)
 
 NAME = MegaPhone
 
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
@@ -15,4 +17,4 @@ clean :
 fclean :
 	rm -rf $(OBJ) $(NAME)
 
-re : fclean re
+re : fclean $(NAME)

@@ -2,6 +2,7 @@
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <string>
+#include <climits>
 
 void AddContact(PhoneBook &phoneBook)
 {
@@ -55,13 +56,13 @@ void UserInput(PhoneBook &phoneBook)
 		phoneBook.Search(number);
 	}
 	else if (input == "EXIT")
-		exit(0);
+		return ;
 	else
 		std::cout << "Operation is unvalide" << std::endl;
 	UserInput(phoneBook);
 }
 
-int main(int ac, char **av)
+int main(void)
 {
 	PhoneBook phoneBook;
 

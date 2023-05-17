@@ -1,5 +1,7 @@
 #include "Account.hpp"
 #include <iostream>
+#include <iomanip>
+#include <ctime>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
@@ -27,6 +29,7 @@ Account::Account(int initial_deposit)
 
 Account::~Account()
 {
+    _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";amount:" << _amount
               << ";closed" << std::endl;
 }
@@ -64,6 +67,7 @@ void Account::makeDeposit(int deposit)
     int p_amount = _amount;
     _amount += deposit;
     _nbDeposits++;
+    _totalNbDeposits++;
     _totalAmount += deposit;
     _displayTimestamp();
     std::cout << "index:" << _accountIndex << ";p_amount:"
@@ -79,13 +83,14 @@ bool Account::makeWithdrawal(int withdrawal)
     if (withdrawal > _amount)
     {
         std::cout << "index:" << _accountIndex << ";p_amount:"
-                  << p_amount << ";withdrawal: refused"
+                  << p_amount << ";withdrawal:refused"
                   << std::endl;
         return false;
     }
     _amount -= withdrawal;
     _totalAmount -= withdrawal;
     _nbWithdrawals++;
+    _totalNbWithdrawals++;
     std::cout << "index:" << _accountIndex << ";p_amount:"
               << p_amount << ";withdrawal:" << withdrawal
               << ";amount:" << _amount << ";nb_withdrawals:"
@@ -107,5 +112,12 @@ void Account::displayStatus(void) const
 
 void Account::_displayTimestamp(void)
 {
-    std::cout << "[19920104_091532] ";
+    std::time_t sys_time;
+    std::time(&sys_time);
+
+    std::tm *m_time = std::localtime(&sys_time);
+
+    char buffer[20];
+    std::strftime(buffer, sizeof(buffer), "%Y%m%d_%H%M%S", m_time);
+    std::cout << "[" << buffer << "] ";
 }
