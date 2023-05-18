@@ -15,8 +15,10 @@ Harl::~Harl()
 
 void Harl::complain(std::string level)
 {
+    std::cout << "[" << level << "]" << std::endl;
     harl_voice complain = m_complains_list[level];
     (this->*complain)();
+    std::cout << std::endl;
 }
 
 void Harl::debug(void)

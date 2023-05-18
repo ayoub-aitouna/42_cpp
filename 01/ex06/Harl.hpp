@@ -8,7 +8,7 @@
 class Harl
 {
 public:
-    Harl();
+    Harl(std::string filter);
     ~Harl();
     void complain(std::string level);
 
@@ -18,6 +18,8 @@ private:
     void info(void);
     void warning(void);
     void error(void);
+    std::string filter;
+    std::map<std::string, int> levels;
     std::map<std::string, harl_voice> m_complains_list;
 };
 #endif
