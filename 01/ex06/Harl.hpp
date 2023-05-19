@@ -18,7 +18,9 @@ private:
     void info(void);
     void warning(void);
     void error(void);
+
     std::string filter;
+    std::string level;
     std::map<std::string, int> levels;
     std::map<std::string, harl_voice> m_complains_list;
 };
