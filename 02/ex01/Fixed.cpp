@@ -10,11 +10,10 @@ Fixed::Fixed()
 
 Fixed::Fixed(int initVlaue)
 {
-	fixedPointValue = 0;
+	fixedPointValue = (initValue << 8);
 	std::cout << "Int constructor called" << std::endl;
-	(void) initVlaue;
-
 }
+
 int getExponent(float value)
 {
 	int *intPtr = (int *) &value;
@@ -24,17 +23,20 @@ int getExponent(float value)
 	return (expo - 127);
 }
 
+
+
 Fixed::Fixed(float initVlaue)
 {
-	fixedPointValue = 0;
-	std::cout << "Float constructor called expo is : " << getExponent(initVlaue) << std::endl;
+	int Natual = static_cast<int>(initVlaue);
 
+	fixedPointValue = (Natual << fractional_bits);
+	std::cout << "Float constructor called expo is : " << getExponent(initVlaue) << std::endl;
 }
 
 Fixed::Fixed(Fixed &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->fixedPointValue = copy.fixedPointValue;
+	this->fixedPointValue = copy.getRawBits();
 }
 
 Fixed::~Fixed()
@@ -53,12 +55,20 @@ void Fixed::setRawBits(int const raw)
 	std::cout << "setRawBits member function called" << std::endl;
 }
 
-/*
-   Fixed &Fixed::operator=(const Fixed &copy)
-   {
-   std::cout << "Copy assignment operator called" << std::endl;
-   if (this != &copy)
-   this->fixedPointValue = copy.fixedPointValue;
-   return *this;
-   }
-   */
+Fixed &Fixed::operator=(const Fixed &copy)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &copy)
+		this->fixedPointValue = copy.fixedPointValue;
+	return *this;
+}
+
+std::ostream &Fixed::operator <<(std::ostream &os, Fixed &value)
+{
+	int RawBits = value.getRawBits();
+	int NatualPart = (RawBits >> fractional_bits);
+	int FractionaPart  = (RawBits >> (sizeof(int) - fractional_bits)) && 0xFF;
+	os << NatualNumber << "." << FractionaPart;
+	return (os);
+}
+

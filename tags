@@ -201,7 +201,9 @@ name	01/ex01/Zombie.hpp	/^    std::string name;$/;"	m	class:Zombie
 name	01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
 newZombie	01/ex00/newZombie.cpp	/^Zombie *newZombie(std::string name)$/;"	f
+operator <<	02/ex01/Fixed.cpp	/^std::ostream &Fixed::operator <<(std::ostream &os, Fixed &value)$/;"	f	class:Fixed
 operator =	02/ex00/Fixed.cpp	/^Fixed &Fixed::operator=(const Fixed &copy)$/;"	f	class:Fixed
+operator =	02/ex01/Fixed.cpp	/^Fixed &Fixed::operator=(const Fixed &copy)$/;"	f	class:Fixed
 printInBox	00/ex01/PhoneBook.cpp	/^void printInBox(std::string value)$/;"	f
 randomChump	01/ex00/randomChump.cpp	/^void randomChump(std::string name)$/;"	f
 replacement	01/ex04/Replace.hpp	/^    std::string replacement;$/;"	m	class:Replace

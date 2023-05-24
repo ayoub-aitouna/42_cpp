@@ -19,8 +19,6 @@ class Fixed
 	public:
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
-		Fixed &operator=(const Fixed &data);
-		//std::ostream &operator<<(std::ostream &os, const Fixed &copy);
 		float	toFloar(void) const;
 		int		toInt(void) const;
 };
