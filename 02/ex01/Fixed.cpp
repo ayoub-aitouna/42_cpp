@@ -10,30 +10,17 @@ Fixed::Fixed()
 
 Fixed::Fixed(int initVlaue)
 {
-	fixedPointValue = (initValue << 8);
+	fixedPointValue = (initVlaue << fractional_bits);
 	std::cout << "Int constructor called" << std::endl;
 }
 
-int getExponent(float value)
-{
-	int *intPtr = (int *) &value;
-
-	int intval = *intPtr;
-	int expo =  (intval >> 23) & 0xFF;
-	return (expo - 127);
-}
-
-
-
 Fixed::Fixed(float initVlaue)
 {
-	int Natual = static_cast<int>(initVlaue);
-
-	fixedPointValue = (Natual << fractional_bits);
-	std::cout << "Float constructor called expo is : " << getExponent(initVlaue) << std::endl;
+	fixedPointValue = roundf(initVlaue * (1 << fractional_bits));
+	std::cout << "Float constructor called " << std::endl;
 }
 
-Fixed::Fixed(Fixed &copy)
+Fixed::Fixed(Fixed const &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	this->fixedPointValue = copy.getRawBits();
@@ -49,13 +36,24 @@ int Fixed::getRawBits(void) const
 	std::cout << "getRawBits member function called" << std::endl;
 	return (fixedPointValue);
 }
+
 void Fixed::setRawBits(int const raw)
 {
 	fixedPointValue = raw;
 	std::cout << "setRawBits member function called" << std::endl;
 }
 
-Fixed &Fixed::operator=(const Fixed &copy)
+float Fixed::toFloat(void) const
+{
+	return static_cast<float>(this->fixedPointValue) / (1 << fractional_bits);
+}
+
+int Fixed::toInt(void) const
+{
+	return (this->fixedPointValue >> fractional_bits);
+}
+
+Fixed Fixed::operator=(const Fixed &copy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy)
@@ -63,12 +61,8 @@ Fixed &Fixed::operator=(const Fixed &copy)
 	return *this;
 }
 
-std::ostream &Fixed::operator <<(std::ostream &os, Fixed &value)
+std::ostream &operator<<(std::ostream &os, const Fixed &value)
 {
-	int RawBits = value.getRawBits();
-	int NatualPart = (RawBits >> fractional_bits);
-	int FractionaPart  = (RawBits >> (sizeof(int) - fractional_bits)) && 0xFF;
-	os << NatualNumber << "." << FractionaPart;
+	os << value.toFloat();
 	return (os);
 }
-

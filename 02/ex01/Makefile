@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = a.out
+NAME = Fixed
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
