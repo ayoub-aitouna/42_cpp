@@ -23,6 +23,7 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 		Fixed	operator=(const Fixed &copy);
-		friend std::ostream &operator<<(std::ostream &os, const Fixed &value);
 };
+std::ostream &operator<<(std::ostream &os, const Fixed &value);
+bool operator>(const Fixed &obj1, const Fixed &obj2);
 #endif

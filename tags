@@ -3,13 +3,13 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 Account	00/ex02/Account.cpp	/^Account::Account()$/;"	f	class:Account
 Account	00/ex02/Account.cpp	/^Account::Account(int initial_deposit)$/;"	f	class:Account
 Account	00/ex02/Account.hpp	/^class Account$/;"	c
 Add	00/ex01/PhoneBook.cpp	/^void PhoneBook::Add(Contact &new_contact)$/;"	f	class:PhoneBook
 AddContact	00/ex01/main.cpp	/^void AddContact(PhoneBook &phoneBook)$/;"	f
-CONTACT_HPP	00/ex01/Contact.hpp	2;"	d
+CONTACT_HPP	00/ex01/Contact.hpp	/^#define CONTACT_HPP$/;"	d
 CPPFLAGS	00/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
@@ -22,14 +22,16 @@ CPPFLAGS	01/ex05/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	01/ex06/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	02/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	02/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
+CPPFLAGS	02/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 Contact	00/ex01/Contact.cpp	/^Contact::Contact()$/;"	f	class:Contact
 Contact	00/ex01/Contact.cpp	/^Contact::Contact(Contact &contact_instance)$/;"	f	class:Contact
 Contact	00/ex01/Contact.cpp	/^Contact::Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number)$/;"	f	class:Contact
 Contact	00/ex01/Contact.hpp	/^class Contact{$/;"	c
 CopyAndReplace	01/ex04/Replace.cpp	/^void Replace::CopyAndReplace()$/;"	f	class:Replace
 Display	00/ex01/Contact.cpp	/^std::string Contact::Display(int id)$/;"	f	class:Contact
-FIXED_HPP	02/ex00/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex01/Fixed.hpp	2;"	d
+FIXED_HPP	02/ex00/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex01/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex02/Fixed.hpp	/^#define FIXED_HPP$/;"	d
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed()$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed(Fixed &copy)$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.hpp	/^class Fixed$/;"	c
@@ -38,15 +40,20 @@ Fixed	02/ex01/Fixed.cpp	/^Fixed::Fixed(Fixed const &copy)$/;"	f	class:Fixed
 Fixed	02/ex01/Fixed.cpp	/^Fixed::Fixed(float initVlaue)$/;"	f	class:Fixed
 Fixed	02/ex01/Fixed.cpp	/^Fixed::Fixed(int initVlaue)$/;"	f	class:Fixed
 Fixed	02/ex01/Fixed.hpp	/^class Fixed$/;"	c
+Fixed	02/ex02/Fixed.cpp	/^Fixed::Fixed()$/;"	f	class:Fixed
+Fixed	02/ex02/Fixed.cpp	/^Fixed::Fixed(Fixed const &copy)$/;"	f	class:Fixed
+Fixed	02/ex02/Fixed.cpp	/^Fixed::Fixed(float initVlaue)$/;"	f	class:Fixed
+Fixed	02/ex02/Fixed.cpp	/^Fixed::Fixed(int initVlaue)$/;"	f	class:Fixed
+Fixed	02/ex02/Fixed.hpp	/^class Fixed$/;"	c
 GetFirstName	00/ex01/Contact.cpp	/^std::string Contact::GetFirstName()$/;"	f	class:Contact
 GetLastName	00/ex01/Contact.cpp	/^std::string Contact::GetLastName()$/;"	f	class:Contact
 GetNickName	00/ex01/Contact.cpp	/^std::string Contact::GetNickName()$/;"	f	class:Contact
 GetPhoneNumebr	00/ex01/Contact.cpp	/^std::string Contact::GetPhoneNumebr()$/;"	f	class:Contact
 GetSecret	00/ex01/Contact.cpp	/^std::string Contact::GetSecret()$/;"	f	class:Contact
-HARL_HPP	01/ex05/Harl.hpp	2;"	d
-HARL_HPP	01/ex06/Harl.hpp	2;"	d
-HUMANA_HPP	01/ex03/HumanA.hpp	2;"	d
-HUMANB_HPP	01/ex03/HumanB.hpp	2;"	d
+HARL_HPP	01/ex05/Harl.hpp	/^#define HARL_HPP$/;"	d
+HARL_HPP	01/ex06/Harl.hpp	/^#define HARL_HPP$/;"	d
+HUMANA_HPP	01/ex03/HumanA.hpp	/^#define HUMANA_HPP$/;"	d
+HUMANB_HPP	01/ex03/HumanB.hpp	/^#define HUMANB_HPP$/;"	d
 Harl	01/ex05/Harl.cpp	/^Harl::Harl()$/;"	f	class:Harl
 Harl	01/ex05/Harl.hpp	/^class Harl$/;"	c
 Harl	01/ex06/Harl.cpp	/^Harl::Harl(std::string filter)$/;"	f	class:Harl
@@ -68,6 +75,7 @@ NAME	01/ex05/Makefile	/^NAME = Harl$/;"	m
 NAME	01/ex06/Makefile	/^NAME = harlFilter$/;"	m
 NAME	02/ex00/Makefile	/^NAME = a.out$/;"	m
 NAME	02/ex01/Makefile	/^NAME = Fixed$/;"	m
+NAME	02/ex02/Makefile	/^NAME = Fixed$/;"	m
 OBJ	00/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	00/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	00/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
@@ -80,12 +88,13 @@ OBJ	01/ex05/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	01/ex06/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	02/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	02/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
-PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	2;"	d
+OBJ	02/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	/^#define PHONE_BOOK_HPP$/;"	d
 PhoneBook	00/ex01/PhoneBook.cpp	/^PhoneBook::PhoneBook()$/;"	f	class:PhoneBook
 PhoneBook	00/ex01/PhoneBook.hpp	/^class PhoneBook$/;"	c
 PrintRow	00/ex01/PhoneBook.cpp	/^void PrintRow(std::string val1, std::string val2, std::string val3, std::string val4)$/;"	f
 Print_Line	00/ex01/PhoneBook.cpp	/^void Print_Line(int len)$/;"	f
-REPLACE_HPP	01/ex04/Replace.hpp	2;"	d
+REPLACE_HPP	01/ex04/Replace.hpp	/^#define REPLACE_HPP$/;"	d
 Replace	01/ex04/Replace.cpp	/^Replace::Replace(std::string inputFileName, std::string value, std::string replacement)$/;"	f	class:Replace
 Replace	01/ex04/Replace.hpp	/^class Replace$/;"	c
 ReplaceInLine	01/ex04/Replace.cpp	/^std::string Replace::ReplaceInLine(std::string line)$/;"	f	class:Replace
@@ -101,6 +110,7 @@ SRC	01/ex05/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	01/ex06/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	02/ex00/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	02/ex01/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+SRC	02/ex02/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 Search	00/ex01/PhoneBook.cpp	/^void PhoneBook::Search(int index)$/;"	f	class:PhoneBook
 SetFirstName	00/ex01/Contact.cpp	/^void Contact::SetFirstName(std::string name)$/;"	f	class:Contact
 SetLastName	00/ex01/Contact.cpp	/^void Contact::SetLastName(std::string name)$/;"	f	class:Contact
@@ -108,21 +118,21 @@ SetNickName	00/ex01/Contact.cpp	/^void Contact::SetNickName(std::string name)$/;
 SetPhoneNumber	00/ex01/Contact.cpp	/^void Contact::SetPhoneNumber(std::string number)$/;"	f	class:Contact
 SetSecret	00/ex01/Contact.cpp	/^void Contact::SetSecret(std::string secret)$/;"	f	class:Contact
 UserInput	00/ex01/main.cpp	/^void UserInput(PhoneBook &phoneBook)$/;"	f
-WEAPON_HPP	01/ex03/weapon.hpp	2;"	d
+WEAPON_HPP	01/ex03/weapon.hpp	/^#define WEAPON_HPP$/;"	d
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon()$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon(std::string type)$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.hpp	/^class Weapon {$/;"	c
-ZOMBIE_H	01/ex00/Zombie.h	2;"	d
-ZOMBIE_H	01/ex01/Zombie.h	2;"	d
-ZOMBIE_HPP	01/ex00/Zombie.hpp	2;"	d
-ZOMBIE_HPP	01/ex01/Zombie.hpp	2;"	d
+ZOMBIE_H	01/ex00/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_H	01/ex01/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_HPP	01/ex00/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
+ZOMBIE_HPP	01/ex01/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.hpp	/^class Zombie$/;"	c
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.hpp	/^class Zombie$/;"	c
-__ACCOUNT_H__	00/ex02/Account.hpp	12;"	d
+__ACCOUNT_H__	00/ex02/Account.hpp	/^#define __ACCOUNT_H__$/;"	d
 _accountIndex	00/ex02/Account.hpp	/^    int _accountIndex;$/;"	m	class:Account
 _amount	00/ex02/Account.hpp	/^    int _amount;$/;"	m	class:Account
 _displayTimestamp	00/ex02/Account.cpp	/^void Account::_displayTimestamp(void)$/;"	f	class:Account
@@ -152,15 +162,19 @@ error	01/ex06/Harl.cpp	/^void Harl::error(void)$/;"	f	class:Harl
 filter	01/ex06/Harl.hpp	/^    std::string filter;$/;"	m	class:Harl
 fixedPointValue	02/ex00/Fixed.hpp	/^    int fixedPointValue;$/;"	m	class:Fixed
 fixedPointValue	02/ex01/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
+fixedPointValue	02/ex02/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
 fractional_bits	02/ex00/Fixed.cpp	/^const int Fixed::fractional_bits = 8;$/;"	m	class:Fixed	file:
 fractional_bits	02/ex00/Fixed.hpp	/^    static const int fractional_bits;$/;"	m	class:Fixed
 fractional_bits	02/ex01/Fixed.cpp	/^const int Fixed::fractional_bits = 8;$/;"	m	class:Fixed	file:
 fractional_bits	02/ex01/Fixed.hpp	/^		static const int	fractional_bits;$/;"	m	class:Fixed
+fractional_bits	02/ex02/Fixed.cpp	/^const int Fixed::fractional_bits = 8;$/;"	m	class:Fixed	file:
+fractional_bits	02/ex02/Fixed.hpp	/^		static const int	fractional_bits;$/;"	m	class:Fixed
 getNbAccounts	00/ex02/Account.cpp	/^int Account::getNbAccounts(void)$/;"	f	class:Account
 getNbDeposits	00/ex02/Account.cpp	/^int Account::getNbDeposits(void)$/;"	f	class:Account
 getNbWithdrawals	00/ex02/Account.cpp	/^int Account::getNbWithdrawals(void)$/;"	f	class:Account
 getRawBits	02/ex00/Fixed.cpp	/^int Fixed::getRawBits(void) const$/;"	f	class:Fixed
 getRawBits	02/ex01/Fixed.cpp	/^int Fixed::getRawBits(void) const$/;"	f	class:Fixed
+getRawBits	02/ex02/Fixed.cpp	/^int Fixed::getRawBits(void) const$/;"	f	class:Fixed
 getTotalAmount	00/ex02/Account.cpp	/^int Account::getTotalAmount(void)$/;"	f	class:Account
 getType	01/ex03/weapon.cpp	/^std::string Weapon::getType()$/;"	f	class:Weapon
 harl_voice	01/ex05/Harl.hpp	/^    typedef void (Harl::*harl_voice)();$/;"	t	class:Harl
@@ -191,27 +205,51 @@ main	01/ex05/main.cpp	/^int main(void)$/;"	f
 main	01/ex06/main.cpp	/^int main(int ac, char **av)$/;"	f
 main	02/ex00/main.cpp	/^int main(void)$/;"	f
 main	02/ex01/main.cpp	/^int main( void ) {$/;"	f
+main	02/ex02/main.cpp	/^int main( void )$/;"	f
 makeDeposit	00/ex02/Account.cpp	/^void Account::makeDeposit(int deposit)$/;"	f	class:Account
 makeWithdrawal	00/ex02/Account.cpp	/^bool Account::makeWithdrawal(int withdrawal)$/;"	f	class:Account
+max	02/ex02/Fixed.cpp	/^Fixed&		Fixed::max(const Fixed& lhs, const Fixed& rhs)$/;"	f	class:Fixed
+max	02/ex02/Fixed.cpp	/^Fixed&		const Fixed::max(Fixed& lhs, Fixed& rhs)$/;"	f	class:Fixed
+min	02/ex02/Fixed.cpp	/^Fixed&		Fixed::min(Fixed& lhs, Fixed& rhs)$/;"	f	class:Fixed
+min	02/ex02/Fixed.cpp	/^Fixed&		Fixed::min(const Fixed& lhs, const Fixed& rhs)$/;"	f	class:Fixed
 name	01/ex00/Zombie.hpp	/^    std::string name;$/;"	m	class:Zombie
 name	01/ex01/Zombie.hpp	/^    std::string name;$/;"	m	class:Zombie
 name	01/ex03/HumanA.hpp	/^		std::string name;$/;"	m	class:HumanA
 name	01/ex03/HumanB.hpp	/^		std::string name;$/;"	m	class:HumanB
 newZombie	01/ex00/newZombie.cpp	/^Zombie *newZombie(std::string name)$/;"	f
+operator !=	02/ex02/Fixed.cpp	/^bool operator!=(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator *	02/ex02/Fixed.cpp	/^Fixed operator*(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator +	02/ex02/Fixed.cpp	/^Fixed operator+(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator ++	02/ex02/Fixed.cpp	/^Fixed Fixed::operator++(int)$/;"	f	class:Fixed
+operator ++	02/ex02/Fixed.cpp	/^Fixed& Fixed::operator++()$/;"	f	class:Fixed
+operator -	02/ex02/Fixed.cpp	/^Fixed operator-(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator --	02/ex02/Fixed.cpp	/^Fixed Fixed::operator--(int)$/;"	f	class:Fixed
+operator --	02/ex02/Fixed.cpp	/^Fixed& Fixed::operator--()$/;"	f	class:Fixed
+operator /	02/ex02/Fixed.cpp	/^Fixed operator\/(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator <	02/ex02/Fixed.cpp	/^bool operator<(const Fixed &lhs, const Fixed &rhs)$/;"	f
 operator <<	02/ex01/Fixed.cpp	/^std::ostream &operator<<(std::ostream &os, const Fixed &value)$/;"	f
+operator <<	02/ex02/Fixed.cpp	/^std::ostream &operator<<(std::ostream &os, const Fixed &value)$/;"	f
+operator <=	02/ex02/Fixed.cpp	/^bool operator<=(const Fixed &lhs, const Fixed &rhs)$/;"	f
 operator =	02/ex00/Fixed.cpp	/^Fixed &Fixed::operator=(const Fixed &copy)$/;"	f	class:Fixed
 operator =	02/ex01/Fixed.cpp	/^Fixed Fixed::operator=(const Fixed &copy)$/;"	f	class:Fixed
+operator =	02/ex02/Fixed.cpp	/^Fixed Fixed::operator=(const Fixed &copy)$/;"	f	class:Fixed
+operator ==	02/ex02/Fixed.cpp	/^bool operator==(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator >	02/ex02/Fixed.cpp	/^bool operator>(const Fixed &lhs, const Fixed &rhs)$/;"	f
+operator >=	02/ex02/Fixed.cpp	/^bool operator>=(const Fixed &lhs, const Fixed &rhs)$/;"	f
 printInBox	00/ex01/PhoneBook.cpp	/^void printInBox(std::string value)$/;"	f
 randomChump	01/ex00/randomChump.cpp	/^void randomChump(std::string name)$/;"	f
 replacement	01/ex04/Replace.hpp	/^    std::string replacement;$/;"	m	class:Replace
 setRawBits	02/ex00/Fixed.cpp	/^void Fixed::setRawBits(int const raw)$/;"	f	class:Fixed
 setRawBits	02/ex01/Fixed.cpp	/^void Fixed::setRawBits(int const raw)$/;"	f	class:Fixed
+setRawBits	02/ex02/Fixed.cpp	/^void Fixed::setRawBits(int const raw)$/;"	f	class:Fixed
 setType	01/ex03/weapon.cpp	/^void Weapon::setType(std::string type)$/;"	f	class:Weapon
 setWeapon	01/ex03/HumanA.cpp	/^void HumanA::setWeapon(Weapon weapon)$/;"	f	class:HumanA
 setWeapon	01/ex03/HumanB.cpp	/^void HumanB::setWeapon(Weapon &weapon)$/;"	f	class:HumanB
 t	00/ex02/Account.hpp	/^    typedef Account t;$/;"	t	class:Account
 toFloat	02/ex01/Fixed.cpp	/^float Fixed::toFloat(void) const$/;"	f	class:Fixed
+toFloat	02/ex02/Fixed.cpp	/^float Fixed::toFloat(void) const$/;"	f	class:Fixed
 toInt	02/ex01/Fixed.cpp	/^int Fixed::toInt(void) const$/;"	f	class:Fixed
+toInt	02/ex02/Fixed.cpp	/^int Fixed::toInt(void) const$/;"	f	class:Fixed
 type	01/ex03/weapon.hpp	/^		std::string type;$/;"	m	class:Weapon
 value	01/ex04/Replace.hpp	/^    std::string value;$/;"	m	class:Replace
 warning	01/ex05/Harl.cpp	/^void Harl::warning(void)$/;"	f	class:Harl
@@ -223,6 +261,7 @@ zombieHorde	01/ex01/ZombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string na
 ~Contact	00/ex01/Contact.cpp	/^Contact::~Contact()$/;"	f	class:Contact
 ~Fixed	02/ex00/Fixed.cpp	/^Fixed::~Fixed()$/;"	f	class:Fixed
 ~Fixed	02/ex01/Fixed.cpp	/^Fixed::~Fixed()$/;"	f	class:Fixed
+~Fixed	02/ex02/Fixed.cpp	/^Fixed::~Fixed()$/;"	f	class:Fixed
 ~Harl	01/ex05/Harl.cpp	/^Harl::~Harl()$/;"	f	class:Harl
 ~Harl	01/ex06/Harl.cpp	/^Harl::~Harl()$/;"	f	class:Harl
 ~HumanA	01/ex03/HumanA.cpp	/^HumanA::~HumanA()$/;"	f	class:HumanA
