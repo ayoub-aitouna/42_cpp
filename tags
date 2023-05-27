@@ -3,14 +3,16 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 Account	00/ex02/Account.cpp	/^Account::Account()$/;"	f	class:Account
 Account	00/ex02/Account.cpp	/^Account::Account(int initial_deposit)$/;"	f	class:Account
 Account	00/ex02/Account.hpp	/^class Account$/;"	c
 Add	00/ex01/PhoneBook.cpp	/^void PhoneBook::Add(Contact &new_contact)$/;"	f	class:PhoneBook
 AddContact	00/ex01/main.cpp	/^void AddContact(PhoneBook &phoneBook)$/;"	f
-Area	02/ex03/bsp.cpp	/^Fixed Area(Point const a, Point const b, Point const c)$/;"	f
-CONTACT_HPP	00/ex01/Contact.hpp	2;"	d
+Area	02/ex03/bsp.cpp	/^Fixed Area(Point const &a, Point const &b, Point const &c)$/;"	f
+AttackDamage	03/ex01/ClapTrap.hpp	/^		int AttackDamage = 0;$/;"	m	class:ClapTrap
+CLAP_TRAP_HPP	03/ex01/ClapTrap.hpp	/^#define CLAP_TRAP_HPP$/;"	d
+CONTACT_HPP	00/ex01/Contact.hpp	/^#define CONTACT_HPP$/;"	d
 CPPFLAGS	00/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
@@ -25,16 +27,18 @@ CPPFLAGS	02/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	02/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	02/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	02/ex03/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
+ClapTrap	03/ex01/ClapTrap.hpp	/^class ClapTrap{$/;"	c
 Contact	00/ex01/Contact.cpp	/^Contact::Contact()$/;"	f	class:Contact
 Contact	00/ex01/Contact.cpp	/^Contact::Contact(Contact &contact_instance)$/;"	f	class:Contact
 Contact	00/ex01/Contact.cpp	/^Contact::Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number)$/;"	f	class:Contact
 Contact	00/ex01/Contact.hpp	/^class Contact{$/;"	c
 CopyAndReplace	01/ex04/Replace.cpp	/^void Replace::CopyAndReplace()$/;"	f	class:Replace
 Display	00/ex01/Contact.cpp	/^std::string Contact::Display(int id)$/;"	f	class:Contact
-FIXED_HPP	02/ex00/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex01/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex02/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex03/Fixed.hpp	2;"	d
+EnergyPoint	03/ex01/ClapTrap.hpp	/^		int EnergyPoint = 10;$/;"	m	class:ClapTrap
+FIXED_HPP	02/ex00/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex01/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex02/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex03/Fixed.hpp	/^#define FIXED_HPP$/;"	d
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed()$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed(Fixed &copy)$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.hpp	/^class Fixed$/;"	c
@@ -60,14 +64,15 @@ GetPhoneNumebr	00/ex01/Contact.cpp	/^std::string Contact::GetPhoneNumebr()$/;"	f
 GetSecret	00/ex01/Contact.cpp	/^std::string Contact::GetSecret()$/;"	f	class:Contact
 Getx	02/ex03/Point.cpp	/^const Fixed Point::Getx() const$/;"	f	class:Point
 Gety	02/ex03/Point.cpp	/^const Fixed Point::Gety() const$/;"	f	class:Point
-HARL_HPP	01/ex05/Harl.hpp	2;"	d
-HARL_HPP	01/ex06/Harl.hpp	2;"	d
-HUMANA_HPP	01/ex03/HumanA.hpp	2;"	d
-HUMANB_HPP	01/ex03/HumanB.hpp	2;"	d
+HARL_HPP	01/ex05/Harl.hpp	/^#define HARL_HPP$/;"	d
+HARL_HPP	01/ex06/Harl.hpp	/^#define HARL_HPP$/;"	d
+HUMANA_HPP	01/ex03/HumanA.hpp	/^#define HUMANA_HPP$/;"	d
+HUMANB_HPP	01/ex03/HumanB.hpp	/^#define HUMANB_HPP$/;"	d
 Harl	01/ex05/Harl.cpp	/^Harl::Harl()$/;"	f	class:Harl
 Harl	01/ex05/Harl.hpp	/^class Harl$/;"	c
 Harl	01/ex06/Harl.cpp	/^Harl::Harl(std::string filter)$/;"	f	class:Harl
 Harl	01/ex06/Harl.hpp	/^class Harl$/;"	c
+HitPoint	03/ex01/ClapTrap.hpp	/^		int HitPoint = 10;$/;"	m	class:ClapTrap
 HumanA	01/ex03/HumanA.cpp	/^HumanA::HumanA(std::string name, Weapon weapon)$/;"	f	class:HumanA
 HumanA	01/ex03/HumanA.hpp	/^class HumanA{$/;"	c
 HumanB	01/ex03/HumanB.cpp	/^HumanB::HumanB(std::string name)$/;"	f	class:HumanB
@@ -88,6 +93,7 @@ NAME	02/ex00/Makefile	/^NAME = a.out$/;"	m
 NAME	02/ex01/Makefile	/^NAME = Fixed$/;"	m
 NAME	02/ex02/Makefile	/^NAME = Fixed$/;"	m
 NAME	02/ex03/Makefile	/^NAME = Fixed$/;"	m
+Name	03/ex01/ClapTrap.hpp	/^		std::string Name;$/;"	m	class:ClapTrap
 OBJ	00/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	00/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	00/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
@@ -102,8 +108,8 @@ OBJ	02/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	02/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	02/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	02/ex03/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
-PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	2;"	d
-POINT_HPP	02/ex03/Point.hpp	2;"	d
+PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	/^#define PHONE_BOOK_HPP$/;"	d
+POINT_HPP	02/ex03/Point.hpp	/^#define POINT_HPP$/;"	d
 PhoneBook	00/ex01/PhoneBook.cpp	/^PhoneBook::PhoneBook()$/;"	f	class:PhoneBook
 PhoneBook	00/ex01/PhoneBook.hpp	/^class PhoneBook$/;"	c
 Point	02/ex03/Point.cpp	/^Point::Point() : x(0), y(0)$/;"	f	class:Point
@@ -112,7 +118,7 @@ Point	02/ex03/Point.cpp	/^Point::Point(const float x, const float y) : x(x) , y(
 Point	02/ex03/Point.hpp	/^class Point{$/;"	c
 PrintRow	00/ex01/PhoneBook.cpp	/^void PrintRow(std::string val1, std::string val2, std::string val3, std::string val4)$/;"	f
 Print_Line	00/ex01/PhoneBook.cpp	/^void Print_Line(int len)$/;"	f
-REPLACE_HPP	01/ex04/Replace.hpp	2;"	d
+REPLACE_HPP	01/ex04/Replace.hpp	/^#define REPLACE_HPP$/;"	d
 Replace	01/ex04/Replace.cpp	/^Replace::Replace(std::string inputFileName, std::string value, std::string replacement)$/;"	f	class:Replace
 Replace	01/ex04/Replace.hpp	/^class Replace$/;"	c
 ReplaceInLine	01/ex04/Replace.cpp	/^std::string Replace::ReplaceInLine(std::string line)$/;"	f	class:Replace
@@ -137,21 +143,21 @@ SetNickName	00/ex01/Contact.cpp	/^void Contact::SetNickName(std::string name)$/;
 SetPhoneNumber	00/ex01/Contact.cpp	/^void Contact::SetPhoneNumber(std::string number)$/;"	f	class:Contact
 SetSecret	00/ex01/Contact.cpp	/^void Contact::SetSecret(std::string secret)$/;"	f	class:Contact
 UserInput	00/ex01/main.cpp	/^void UserInput(PhoneBook &phoneBook)$/;"	f
-WEAPON_HPP	01/ex03/weapon.hpp	2;"	d
+WEAPON_HPP	01/ex03/weapon.hpp	/^#define WEAPON_HPP$/;"	d
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon()$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon(std::string type)$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.hpp	/^class Weapon {$/;"	c
-ZOMBIE_H	01/ex00/Zombie.h	2;"	d
-ZOMBIE_H	01/ex01/Zombie.h	2;"	d
-ZOMBIE_HPP	01/ex00/Zombie.hpp	2;"	d
-ZOMBIE_HPP	01/ex01/Zombie.hpp	2;"	d
+ZOMBIE_H	01/ex00/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_H	01/ex01/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_HPP	01/ex00/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
+ZOMBIE_HPP	01/ex01/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.hpp	/^class Zombie$/;"	c
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.hpp	/^class Zombie$/;"	c
-__ACCOUNT_H__	00/ex02/Account.hpp	12;"	d
+__ACCOUNT_H__	00/ex02/Account.hpp	/^#define __ACCOUNT_H__$/;"	d
 _accountIndex	00/ex02/Account.hpp	/^    int _accountIndex;$/;"	m	class:Account
 _amount	00/ex02/Account.hpp	/^    int _amount;$/;"	m	class:Account
 _displayTimestamp	00/ex02/Account.cpp	/^void Account::_displayTimestamp(void)$/;"	f	class:Account
@@ -231,6 +237,7 @@ main	02/ex00/main.cpp	/^int main(void)$/;"	f
 main	02/ex01/main.cpp	/^int main( void ) {$/;"	f
 main	02/ex02/main.cpp	/^int main( void )$/;"	f
 main	02/ex03/main.cpp	/^int main( void )$/;"	f
+main	03/ex01/main.cpp	/^int main(void)$/;"	f
 makeDeposit	00/ex02/Account.cpp	/^void Account::makeDeposit(int deposit)$/;"	f	class:Account
 makeWithdrawal	00/ex02/Account.cpp	/^bool Account::makeWithdrawal(int withdrawal)$/;"	f	class:Account
 max	02/ex02/Fixed.cpp	/^Fixed&	 Fixed::max(Fixed& lhs, Fixed& rhs)$/;"	f	class:Fixed

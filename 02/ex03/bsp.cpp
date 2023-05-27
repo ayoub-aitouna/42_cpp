@@ -1,7 +1,6 @@
 
 #include "Point.hpp"
 #include "Fixed.hpp"
-#include <bits/types/FILE.h>
 
 Fixed Magnatude(Fixed value)
 {
@@ -12,7 +11,7 @@ Fixed Magnatude(Fixed value)
 
 Fixed Area(Point const &a, Point const &b, Point const &c)
 {
-	return Fixed(0.5f) * Magnatude(((b.Getx() - a.Getx()) * (c.Gety() - a.Getx())) - ((c.Getx() - a.Getx()) * (b.Gety() - a.Gety())));
+	return Fixed(0.5f) * Magnatude(((b.Getx() - a.Getx()) * (c.Gety() - a.Gety())) - ((c.Getx() - a.Getx()) * (b.Gety() - a.Gety())));
 }
 
 bool bsq(Point const a, Point const b, Point const c, Point const point)

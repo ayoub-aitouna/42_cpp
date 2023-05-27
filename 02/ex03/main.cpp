@@ -16,7 +16,7 @@ int main( void )
 	Fixed area = Area(a, b, c);
 	std::cout << "Area of triangle ABC: " << area << std::endl;
 
-	Point point(3.0f, 2.0f);
+	Point point(3.0f, 8.5f);
 	std::cout << "Point " << point << " is inside triangle ABC: " << bsq(a, b, c, point) << std::endl;
 
 	return (EXIT_SUCCESS);
