@@ -41,3 +41,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 	this->EnergyPoint --;
 }
 
+
