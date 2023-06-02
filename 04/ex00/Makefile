@@ -2,16 +2,16 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = DiamondTrap
+NAME = Animals
 
-CPPFLAGS = -Wall -Wextra -Werror  -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	g++ $(OBJ) -o $(NAME)
 
-clean : 
+clean :
 	rm $(OBJ)
 
 fclean :
