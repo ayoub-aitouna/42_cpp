@@ -3,12 +3,14 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-AMATERIA_HPP	04/ex03/AMateria.hpp	2;"	d
+!_TAG_PROGRAM_VERSION	5.8	//
+AMATERIA_HPP	04/ex03/AMateria.hpp	/^#define AMATERIA_HPP$/;"	d
+AMateria	04/ex03/AMateria.cpp	/^AMateria::AMateria(std::string const &type)$/;"	f	class:AMateria
+AMateria	04/ex03/AMateria.cpp	/^AMateria::AMateria(void)$/;"	f	class:AMateria
 AMateria	04/ex03/AMateria.hpp	/^class AMateria$/;"	c
-ANIMAL_HPP	04/ex00/Animal.hpp	2;"	d
-ANIMAL_HPP	04/ex01/Animal.hpp	2;"	d
-ANIMAL_HPP	04/ex02/Animal.hpp	2;"	d
+ANIMAL_HPP	04/ex00/Animal.hpp	/^#define ANIMAL_HPP$/;"	d
+ANIMAL_HPP	04/ex01/Animal.hpp	/^#define ANIMAL_HPP$/;"	d
+ANIMAL_HPP	04/ex02/Animal.hpp	/^#define ANIMAL_HPP$/;"	d
 Account	00/ex02/Account.cpp	/^Account::Account()$/;"	f	class:Account
 Account	00/ex02/Account.cpp	/^Account::Account(int initial_deposit)$/;"	f	class:Account
 Account	00/ex02/Account.hpp	/^class Account$/;"	c
@@ -25,22 +27,22 @@ AttackDamage	03/ex00/ClapTrap.hpp	/^	int AttackDamage;$/;"	m	class:ClapTrap
 AttackDamage	03/ex01/ClapTrap.hpp	/^	int AttackDamage;$/;"	m	class:ClapTrap
 AttackDamage	03/ex02/ClapTrap.hpp	/^		int AttackDamage;$/;"	m	class:ClapTrap
 AttackDamage	03/ex03/ClapTrap.hpp	/^		int AttackDamage;$/;"	m	class:ClapTrap
-BRAIN_HPP	04/ex01/Brain.hpp	2;"	d
-BRAIN_HPP	04/ex02/Brain.hpp	2;"	d
+BRAIN_HPP	04/ex01/Brain.hpp	/^#define BRAIN_HPP$/;"	d
+BRAIN_HPP	04/ex02/Brain.hpp	/^#define BRAIN_HPP$/;"	d
 Brain	04/ex01/Brain.cpp	/^Brain::Brain()$/;"	f	class:Brain
 Brain	04/ex01/Brain.cpp	/^Brain::Brain(const Brain &brain)$/;"	f	class:Brain
 Brain	04/ex01/Brain.hpp	/^class Brain$/;"	c
 Brain	04/ex02/Brain.cpp	/^Brain::Brain()$/;"	f	class:Brain
 Brain	04/ex02/Brain.cpp	/^Brain::Brain(const Brain &brain)$/;"	f	class:Brain
 Brain	04/ex02/Brain.hpp	/^class Brain$/;"	c
-CAT_HPP	04/ex00/Cat.hpp	2;"	d
-CAT_HPP	04/ex01/Cat.hpp	2;"	d
-CAT_HPP	04/ex02/Cat.hpp	2;"	d
-CLAP_TRAP_HPP	03/ex00/ClapTrap.hpp	2;"	d
-CLAP_TRAP_HPP	03/ex01/ClapTrap.hpp	2;"	d
-CLAP_TRAP_HPP	03/ex02/ClapTrap.hpp	2;"	d
-CLAP_TRAP_HPP	03/ex03/ClapTrap.hpp	2;"	d
-CONTACT_HPP	00/ex01/Contact.hpp	2;"	d
+CAT_HPP	04/ex00/Cat.hpp	/^#define CAT_HPP$/;"	d
+CAT_HPP	04/ex01/Cat.hpp	/^#define CAT_HPP$/;"	d
+CAT_HPP	04/ex02/Cat.hpp	/^#define CAT_HPP$/;"	d
+CLAP_TRAP_HPP	03/ex00/ClapTrap.hpp	/^#define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	03/ex01/ClapTrap.hpp	/^#define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	03/ex02/ClapTrap.hpp	/^#define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	03/ex03/ClapTrap.hpp	/^#define CLAP_TRAP_HPP$/;"	d
+CONTACT_HPP	00/ex01/Contact.hpp	/^#define CONTACT_HPP$/;"	d
 CPPFLAGS	00/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	00/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
@@ -88,10 +90,10 @@ Contact	00/ex01/Contact.cpp	/^Contact::Contact(Contact &contact_instance)$/;"	f	
 Contact	00/ex01/Contact.cpp	/^Contact::Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number)$/;"	f	class:Contact
 Contact	00/ex01/Contact.hpp	/^class Contact{$/;"	c
 CopyAndReplace	01/ex04/Replace.cpp	/^void Replace::CopyAndReplace()$/;"	f	class:Replace
-DIAMONDTRAP_HPP	03/ex03/DiamondTrap.hpp	2;"	d
-DOG_HPP	04/ex00/Dog.hpp	2;"	d
-DOG_HPP	04/ex01/Dog.hpp	2;"	d
-DOG_HPP	04/ex02/Dog.hpp	2;"	d
+DIAMONDTRAP_HPP	03/ex03/DiamondTrap.hpp	/^#define DIAMONDTRAP_HPP$/;"	d
+DOG_HPP	04/ex00/Dog.hpp	/^#define DOG_HPP$/;"	d
+DOG_HPP	04/ex01/Dog.hpp	/^#define DOG_HPP$/;"	d
+DOG_HPP	04/ex02/Dog.hpp	/^#define DOG_HPP$/;"	d
 DiamondTrap	03/ex03/DiamondTrap.cpp	/^DiamondTrap::DiamondTrap(std::string Name) : ClapTrap(Name + "_clap_name")$/;"	f	class:DiamondTrap
 DiamondTrap	03/ex03/DiamondTrap.hpp	/^class DiamondTrap : public ScavTrap, public FragTrap{$/;"	c
 Display	00/ex01/Contact.cpp	/^std::string Contact::Display(int id)$/;"	f	class:Contact
@@ -107,12 +109,12 @@ EnergyPoint	03/ex00/ClapTrap.hpp	/^	int EnergyPoint;$/;"	m	class:ClapTrap
 EnergyPoint	03/ex01/ClapTrap.hpp	/^	int EnergyPoint;$/;"	m	class:ClapTrap
 EnergyPoint	03/ex02/ClapTrap.hpp	/^		int EnergyPoint;$/;"	m	class:ClapTrap
 EnergyPoint	03/ex03/ClapTrap.hpp	/^		int EnergyPoint;$/;"	m	class:ClapTrap
-FIXED_HPP	02/ex00/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex01/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex02/Fixed.hpp	2;"	d
-FIXED_HPP	02/ex03/Fixed.hpp	2;"	d
-FRAG_TRAP_HPP	03/ex02/FragTrap.hpp	2;"	d
-FRAG_TRAP_HPP	03/ex03/FragTrap.hpp	2;"	d
+FIXED_HPP	02/ex00/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex01/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex02/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FIXED_HPP	02/ex03/Fixed.hpp	/^#define FIXED_HPP$/;"	d
+FRAG_TRAP_HPP	03/ex02/FragTrap.hpp	/^#define FRAG_TRAP_HPP$/;"	d
+FRAG_TRAP_HPP	03/ex03/FragTrap.hpp	/^#define FRAG_TRAP_HPP$/;"	d
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed()$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.cpp	/^Fixed::Fixed(Fixed &copy)$/;"	f	class:Fixed
 Fixed	02/ex00/Fixed.hpp	/^class Fixed$/;"	c
@@ -144,10 +146,10 @@ GetPhoneNumebr	00/ex01/Contact.cpp	/^std::string Contact::GetPhoneNumebr()$/;"	f
 GetSecret	00/ex01/Contact.cpp	/^std::string Contact::GetSecret()$/;"	f	class:Contact
 Getx	02/ex03/Point.cpp	/^const Fixed Point::Getx() const$/;"	f	class:Point
 Gety	02/ex03/Point.cpp	/^const Fixed Point::Gety() const$/;"	f	class:Point
-HARL_HPP	01/ex05/Harl.hpp	2;"	d
-HARL_HPP	01/ex06/Harl.hpp	2;"	d
-HUMANA_HPP	01/ex03/HumanA.hpp	2;"	d
-HUMANB_HPP	01/ex03/HumanB.hpp	2;"	d
+HARL_HPP	01/ex05/Harl.hpp	/^#define HARL_HPP$/;"	d
+HARL_HPP	01/ex06/Harl.hpp	/^#define HARL_HPP$/;"	d
+HUMANA_HPP	01/ex03/HumanA.hpp	/^#define HUMANA_HPP$/;"	d
+HUMANB_HPP	01/ex03/HumanB.hpp	/^#define HUMANB_HPP$/;"	d
 Harl	01/ex05/Harl.cpp	/^Harl::Harl()$/;"	f	class:Harl
 Harl	01/ex05/Harl.hpp	/^class Harl$/;"	c
 Harl	01/ex06/Harl.cpp	/^Harl::Harl(std::string filter)$/;"	f	class:Harl
@@ -160,7 +162,7 @@ HumanA	01/ex03/HumanA.cpp	/^HumanA::HumanA(std::string name, Weapon weapon)$/;"	
 HumanA	01/ex03/HumanA.hpp	/^class HumanA{$/;"	c
 HumanB	01/ex03/HumanB.cpp	/^HumanB::HumanB(std::string name)$/;"	f	class:HumanB
 HumanB	01/ex03/HumanB.hpp	/^class HumanB {$/;"	c
-ICHARACTER_HPP	04/ex03/ICharacter.hpp	2;"	d
+ICHARACTER_HPP	04/ex03/ICharacter.hpp	/^#define ICHARACTER_HPP$/;"	d
 ICharacter	04/ex03/ICharacter.hpp	/^class ICharacter$/;"	c
 List	00/ex01/PhoneBook.cpp	/^void PhoneBook::List()$/;"	f	class:PhoneBook
 Magnatude	02/ex03/bsp.cpp	/^Fixed Magnatude(Fixed value)$/;"	f
@@ -213,8 +215,8 @@ OBJ	04/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	04/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	04/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	04/ex03/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
-PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	2;"	d
-POINT_HPP	02/ex03/Point.hpp	2;"	d
+PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	/^#define PHONE_BOOK_HPP$/;"	d
+POINT_HPP	02/ex03/Point.hpp	/^#define POINT_HPP$/;"	d
 PhoneBook	00/ex01/PhoneBook.cpp	/^PhoneBook::PhoneBook()$/;"	f	class:PhoneBook
 PhoneBook	00/ex01/PhoneBook.hpp	/^class PhoneBook$/;"	c
 Point	02/ex03/Point.cpp	/^Point::Point() : x(0), y(0)$/;"	f	class:Point
@@ -223,13 +225,14 @@ Point	02/ex03/Point.cpp	/^Point::Point(const float x, const float y) : x(x) , y(
 Point	02/ex03/Point.hpp	/^class Point{$/;"	c
 PrintRow	00/ex01/PhoneBook.cpp	/^void PrintRow(std::string val1, std::string val2, std::string val3, std::string val4)$/;"	f
 Print_Line	00/ex01/PhoneBook.cpp	/^void Print_Line(int len)$/;"	f
-REPLACE_HPP	01/ex04/Replace.hpp	2;"	d
+REPLACE_HPP	01/ex04/Replace.hpp	/^#define REPLACE_HPP$/;"	d
+Read	00/ex01/main.cpp	/^std::string Read(std::string Msg)$/;"	f
 Replace	01/ex04/Replace.cpp	/^Replace::Replace(std::string inputFileName, std::string value, std::string replacement)$/;"	f	class:Replace
 Replace	01/ex04/Replace.hpp	/^class Replace$/;"	c
 ReplaceInLine	01/ex04/Replace.cpp	/^std::string Replace::ReplaceInLine(std::string line)$/;"	f	class:Replace
-SCAV_TRAP_HPP	03/ex01/ScavTrap.hpp	2;"	d
-SCAV_TRAP_HPP	03/ex02/ScavTrap.hpp	2;"	d
-SCAV_TRAP_HPP	03/ex03/ScavTrap.hpp	2;"	d
+SCAV_TRAP_HPP	03/ex01/ScavTrap.hpp	/^#define SCAV_TRAP_HPP$/;"	d
+SCAV_TRAP_HPP	03/ex02/ScavTrap.hpp	/^#define SCAV_TRAP_HPP$/;"	d
+SCAV_TRAP_HPP	03/ex03/ScavTrap.hpp	/^#define SCAV_TRAP_HPP$/;"	d
 SRC	00/ex00/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	00/ex01/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	00/ex02/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
@@ -267,14 +270,15 @@ SetLastName	00/ex01/Contact.cpp	/^void Contact::SetLastName(std::string name)$/;
 SetNickName	00/ex01/Contact.cpp	/^void Contact::SetNickName(std::string name)$/;"	f	class:Contact
 SetPhoneNumber	00/ex01/Contact.cpp	/^void Contact::SetPhoneNumber(std::string number)$/;"	f	class:Contact
 SetSecret	00/ex01/Contact.cpp	/^void Contact::SetSecret(std::string secret)$/;"	f	class:Contact
+Type	04/ex03/AMateria.hpp	/^	std::string Type;$/;"	m	class:AMateria
 UserInput	00/ex01/main.cpp	/^void UserInput(PhoneBook &phoneBook)$/;"	f
-WEAPON_HPP	01/ex03/weapon.hpp	2;"	d
-WRONG_ANIMAL_HPP	04/ex00/WrongAnimal.hpp	2;"	d
-WRONG_ANIMAL_HPP	04/ex01/WrongAnimal.hpp	2;"	d
-WRONG_ANIMAL_HPP	04/ex02/WrongAnimal.hpp	2;"	d
-WRONG_CAT_HPP	04/ex00/WrongCat.hpp	2;"	d
-WRONG_CAT_HPP	04/ex01/WrongCat.hpp	2;"	d
-WRONG_CAT_HPP	04/ex02/WrongCat.hpp	2;"	d
+WEAPON_HPP	01/ex03/weapon.hpp	/^#define WEAPON_HPP$/;"	d
+WRONG_ANIMAL_HPP	04/ex00/WrongAnimal.hpp	/^#define WRONG_ANIMAL_HPP$/;"	d
+WRONG_ANIMAL_HPP	04/ex01/WrongAnimal.hpp	/^#define WRONG_ANIMAL_HPP$/;"	d
+WRONG_ANIMAL_HPP	04/ex02/WrongAnimal.hpp	/^#define WRONG_ANIMAL_HPP$/;"	d
+WRONG_CAT_HPP	04/ex00/WrongCat.hpp	/^#define WRONG_CAT_HPP$/;"	d
+WRONG_CAT_HPP	04/ex01/WrongCat.hpp	/^#define WRONG_CAT_HPP$/;"	d
+WRONG_CAT_HPP	04/ex02/WrongCat.hpp	/^#define WRONG_CAT_HPP$/;"	d
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon()$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.cpp	/^Weapon::Weapon(std::string type)$/;"	f	class:Weapon
 Weapon	01/ex03/weapon.hpp	/^class Weapon {$/;"	c
@@ -290,17 +294,17 @@ WrongCat	04/ex01/WrongCat.cpp	/^WrongCat::WrongCat()$/;"	f	class:WrongCat
 WrongCat	04/ex01/WrongCat.hpp	/^class WrongCat : public WrongAnimal$/;"	c
 WrongCat	04/ex02/WrongCat.cpp	/^WrongCat::WrongCat()$/;"	f	class:WrongCat
 WrongCat	04/ex02/WrongCat.hpp	/^class WrongCat : public WrongAnimal$/;"	c
-ZOMBIE_H	01/ex00/Zombie.h	2;"	d
-ZOMBIE_H	01/ex01/Zombie.h	2;"	d
-ZOMBIE_HPP	01/ex00/Zombie.hpp	2;"	d
-ZOMBIE_HPP	01/ex01/Zombie.hpp	2;"	d
+ZOMBIE_H	01/ex00/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_H	01/ex01/Zombie.h	/^#define ZOMBIE_H$/;"	d
+ZOMBIE_HPP	01/ex00/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
+ZOMBIE_HPP	01/ex01/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex00/Zombie.hpp	/^class Zombie$/;"	c
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie()$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.cpp	/^Zombie::Zombie(std::string name)$/;"	f	class:Zombie
 Zombie	01/ex01/Zombie.hpp	/^class Zombie$/;"	c
-__ACCOUNT_H__	00/ex02/Account.hpp	12;"	d
+__ACCOUNT_H__	00/ex02/Account.hpp	/^#define __ACCOUNT_H__$/;"	d
 _accountIndex	00/ex02/Account.hpp	/^    int _accountIndex;$/;"	m	class:Account
 _amount	00/ex02/Account.hpp	/^    int _amount;$/;"	m	class:Account
 _displayTimestamp	00/ex02/Account.cpp	/^void Account::_displayTimestamp(void)$/;"	f	class:Account
@@ -373,6 +377,7 @@ getType	04/ex01/Animal.cpp	/^std::string Animal::getType(void) const$/;"	f	class
 getType	04/ex01/WrongAnimal.cpp	/^std::string WrongAnimal::getType(void) const$/;"	f	class:WrongAnimal
 getType	04/ex02/Animal.cpp	/^std::string Animal::getType(void) const$/;"	f	class:Animal
 getType	04/ex02/WrongAnimal.cpp	/^std::string WrongAnimal::getType(void) const$/;"	f	class:WrongAnimal
+getType	04/ex03/AMateria.cpp	/^std::string const &AMateria::getType() const$/;"	f	class:std::AMateria
 guardGate	03/ex01/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap
 guardGate	03/ex02/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap
 guardGate	03/ex03/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap
@@ -516,6 +521,7 @@ type	04/ex01/Animal.hpp	/^    std::string type;$/;"	m	class:Animal
 type	04/ex01/WrongAnimal.hpp	/^    std::string type;$/;"	m	class:WrongAnimal
 type	04/ex02/Animal.hpp	/^    std::string type;$/;"	m	class:Animal
 type	04/ex02/WrongAnimal.hpp	/^    std::string type;$/;"	m	class:WrongAnimal
+use	04/ex03/AMateria.cpp	/^void AMateria::use(ICharacter &target)$/;"	f	class:AMateria
 value	01/ex04/Replace.hpp	/^    std::string value;$/;"	m	class:Replace
 warning	01/ex05/Harl.cpp	/^void Harl::warning(void)$/;"	f	class:Harl
 warning	01/ex06/Harl.cpp	/^void Harl::warning(void)$/;"	f	class:Harl

@@ -82,7 +82,7 @@ void Contact::SetPhoneNumber(std::string number)
 std::string Contact::Display(int id)
 {
 	std::ostringstream oss;
-	oss << "id : " << id << " First Name : " << m_first_name << " Last Name : " << m_last_name << " PhoneNumber : " << m_phone_number;
+	oss << "id : " << id << std::endl << "First Name : " << m_first_name << std::endl << "Last Name : " << m_last_name << std::endl << "PhoneNumber : " << m_phone_number;
 	return (oss.str());
 }
 

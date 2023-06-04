@@ -4,6 +4,17 @@
 #include <string>
 #include <climits>
 
+std::string Read(std::string Msg)
+{
+	std::string tmp;
+	do
+	{
+		std::cout << Msg << std::endl;
+		std::getline(std::cin, tmp);
+	} while (tmp.length() == 0);
+	return tmp;
+}
+
 void AddContact(PhoneBook &phoneBook)
 {
 	std::string first_name;
@@ -12,21 +23,11 @@ void AddContact(PhoneBook &phoneBook)
 	std::string darkest_secret;
 	std::string phone_number;
 
-	std::cout << "first name" << std::endl;
-	std::getline(std::cin, first_name);
-
-	std::cout << "last name" << std::endl;
-	std::getline(std::cin, last_name);
-
-	std::cout << "nickname" << std::endl;
-	std::getline(std::cin, nickname);
-
-	std::cout << "darkest secret" << std::endl;
-	std::getline(std::cin, darkest_secret);
-
-	std::cout << "phone number" << std::endl;
-	std::getline(std::cin, phone_number);
-
+	first_name = Read("first name");
+	last_name = Read("last name");
+	nickname = Read("nickname");
+	darkest_secret = Read("darkest secret");
+	phone_number = Read("phone number");
 	Contact contact(first_name, last_name, nickname,
 					darkest_secret, phone_number);
 	phoneBook.Add(contact);
@@ -56,7 +57,7 @@ void UserInput(PhoneBook &phoneBook)
 		phoneBook.Search(number);
 	}
 	else if (input == "EXIT")
-		return ;
+		return;
 	else
 		std::cout << "Operation is unvalide" << std::endl;
 	UserInput(phoneBook);
