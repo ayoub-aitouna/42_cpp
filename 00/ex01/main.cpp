@@ -11,6 +11,8 @@ std::string Read(std::string Msg)
 	{
 		std::cout << Msg << std::endl;
 		std::getline(std::cin, tmp);
+		if (std::cin.eof())
+			exit(0);
 	} while (tmp.length() == 0);
 	return tmp;
 }
@@ -33,40 +35,42 @@ void AddContact(PhoneBook &phoneBook)
 	phoneBook.Add(contact);
 }
 
-void UserInput(PhoneBook &phoneBook)
+void UserInput()
 {
+	PhoneBook phoneBook;
+	int number;
 	std::string input;
-	std::cout << "Enter Operatrion (ADD/Search)" << std::endl;
-	std::getline(std::cin, input);
 
-	if (input == "ADD")
-		AddContact(phoneBook);
-	else if (input == "SEARCH")
+	while (true)
 	{
-		int number;
-
-		phoneBook.List();
-		std::cout << "enter the number of contact" << std::endl;
-		std::cin >> number;
-		if (std::cin.fail())
+		std::cout << "Enter Operatrion (ADD/Search)" << std::endl;
+		std::getline(std::cin, input);
+		if (std::cin.eof())
+			break;
+		if (input == "ADD")
+			AddContact(phoneBook);
+		else if (input == "SEARCH")
 		{
-			std::cin.clear();
-			std::cout << "Please enter a valided Number " << std::endl;
+			phoneBook.List();
+			std::cout << "enter the number of contact" << std::endl;
+			std::cin >> number;
+			if (std::cin.fail())
+			{
+				std::cin.clear();
+				std::cout << "Please enter a valided Number " << std::endl;
+			}
+			std::cin.ignore(INT_MAX, '\n');
+			phoneBook.Search(number);
 		}
-		std::cin.ignore(INT_MAX, '\n');
-		phoneBook.Search(number);
+		else if (input == "EXIT")
+			return;
+		else
+			std::cout << "Operation is unvalide" << std::endl;
 	}
-	else if (input == "EXIT")
-		return;
-	else
-		std::cout << "Operation is unvalide" << std::endl;
-	UserInput(phoneBook);
 }
 
 int main(void)
 {
-	PhoneBook phoneBook;
-
-	UserInput(phoneBook);
+	UserInput();
 	return (0);
 }

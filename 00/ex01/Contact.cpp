@@ -12,7 +12,7 @@ Contact::Contact(Contact &contact_instance)
 	this->m_last_name = contact_instance.m_last_name;
 	this->m_nickname = contact_instance.m_nickname;
 	this->m_darkest_secret = contact_instance.m_darkest_secret;
-	this->m_phone_number =contact_instance.m_phone_number;
+	this->m_phone_number = contact_instance.m_phone_number;
 }
 
 Contact::Contact(std::string m_first_name, std::string m_last_name, std::string m_nickname, std::string m_darkest_secret, std::string m_phone_number)
@@ -78,11 +78,14 @@ void Contact::SetPhoneNumber(std::string number)
 	m_phone_number = number;
 }
 
-
 std::string Contact::Display(int id)
 {
 	std::ostringstream oss;
-	oss << "id : " << id << std::endl << "First Name : " << m_first_name << std::endl << "Last Name : " << m_last_name << std::endl << "PhoneNumber : " << m_phone_number;
+	oss << "id : " << id << std::endl
+		<< "First Name : " << m_first_name << std::endl
+		<< "Last Name : " << m_last_name << std::endl
+		<< "Nick Name : " << m_nickname << std::endl
+		<< "Darkest Secret : " << m_darkest_secret << std::endl
+		<< "PhoneNumber : " << m_phone_number;
 	return (oss.str());
 }
-

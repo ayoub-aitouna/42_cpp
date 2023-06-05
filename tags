@@ -271,7 +271,7 @@ SetNickName	00/ex01/Contact.cpp	/^void Contact::SetNickName(std::string name)$/;
 SetPhoneNumber	00/ex01/Contact.cpp	/^void Contact::SetPhoneNumber(std::string number)$/;"	f	class:Contact
 SetSecret	00/ex01/Contact.cpp	/^void Contact::SetSecret(std::string secret)$/;"	f	class:Contact
 Type	04/ex03/AMateria.hpp	/^	std::string Type;$/;"	m	class:AMateria
-UserInput	00/ex01/main.cpp	/^void UserInput(PhoneBook &phoneBook)$/;"	f
+UserInput	00/ex01/main.cpp	/^void UserInput()$/;"	f
 WEAPON_HPP	01/ex03/weapon.hpp	/^#define WEAPON_HPP$/;"	d
 WRONG_ANIMAL_HPP	04/ex00/WrongAnimal.hpp	/^#define WRONG_ANIMAL_HPP$/;"	d
 WRONG_ANIMAL_HPP	04/ex01/WrongAnimal.hpp	/^#define WRONG_ANIMAL_HPP$/;"	d

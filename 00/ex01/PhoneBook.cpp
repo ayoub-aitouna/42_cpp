@@ -25,7 +25,7 @@ void PhoneBook::Add(Contact &new_contact)
 }
 void PhoneBook::Search(int index)
 {
-	if (index >= 0 && index < 8)
+	if (index >= 0 && index < this->index)
 		std::cout << m_contact[index].Display(index) << std::endl;
 	else
 		std::cout << "index you entred is unvalide" << std::endl;
