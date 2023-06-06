@@ -11,6 +11,7 @@ public:
 private:
 	Contact m_contact[8];
 	int index;
+	int filled;
 
 public:
 	void Add(Contact &new_contact);

@@ -4,6 +4,7 @@
 #include <string>
 #include <climits>
 
+
 std::string Read(std::string Msg)
 {
 	std::string tmp;
@@ -43,7 +44,7 @@ void UserInput()
 
 	while (true)
 	{
-		std::cout << "Enter Operatrion (ADD/Search)" << std::endl;
+		std::cout << "Enter Operatrion (ADD/SEARCH/EXIT)" << std::endl;
 		std::getline(std::cin, input);
 		if (std::cin.eof())
 			break;
@@ -54,10 +55,14 @@ void UserInput()
 			phoneBook.List();
 			std::cout << "enter the number of contact" << std::endl;
 			std::cin >> number;
+			if(std::cin.eof())
+				exit(0);
 			if (std::cin.fail())
 			{
 				std::cin.clear();
 				std::cout << "Please enter a valided Number " << std::endl;
+				std::cin.ignore(INT_MAX, '\n');
+				continue;
 			}
 			std::cin.ignore(INT_MAX, '\n');
 			phoneBook.Search(number);

@@ -10,7 +10,9 @@
 PhoneBook::PhoneBook()
 {
 	index = 0;
+	filled = 0;
 }
+
 PhoneBook::~PhoneBook()
 {
 }
@@ -18,14 +20,15 @@ PhoneBook::~PhoneBook()
 void PhoneBook::Add(Contact &new_contact)
 {
 	Contact contact(new_contact);
-	m_contact[this->index] = contact;
+ 	m_contact[(this->index % 8)] = contact;
 	this->index++;
-	if (this->index > 7)
-		this->index = 7;
+	this->filled++;
+	if(this->filled >= 8)
+	this->filled  = 8;
 }
 void PhoneBook::Search(int index)
 {
-	if (index >= 0 && index < this->index)
+	if (index >= 0 && index < this->filled)
 		std::cout << m_contact[index].Display(index) << std::endl;
 	else
 		std::cout << "index you entred is unvalide" << std::endl;
@@ -74,7 +77,7 @@ void PhoneBook::List()
 	Print_Line(45);
 	PrintRow("Index", "First Name", "Last Name", "Nick Name");
 	Print_Line(45);
-	for (int i = 0; i < this->index; i++)
+	for (int i = 0; i < this->filled; i++)
 	{
 		oss << i ;
 		PrintRow(oss.str(), m_contact[i].GetFirstName(), m_contact[i].GetLastName(), m_contact[i].GetNickName());
