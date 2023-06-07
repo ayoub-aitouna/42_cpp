@@ -7,7 +7,8 @@ class Fixed
 {
 public:
     Fixed();
-    Fixed(Fixed &copy);
+    Fixed(const Fixed &copy);
+    Fixed &operator=(const Fixed &copy);
     ~Fixed();
 
 private:
@@ -17,6 +18,6 @@ private:
 public:
     int getRawBits(void) const;
     void setRawBits(int const raw);
-    Fixed &operator=(const Fixed &copy);
 };
+
 #endif

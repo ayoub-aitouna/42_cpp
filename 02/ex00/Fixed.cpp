@@ -2,16 +2,14 @@
 
 const int Fixed::fractional_bits = 8;
 
-Fixed::Fixed()
+Fixed::Fixed() : fixedPointValue(0)
 {
-    fixedPointValue = 0;
     std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(Fixed &copy)
+Fixed::Fixed(const Fixed &copy) : fixedPointValue(copy.fixedPointValue)
 {
     std::cout << "Copy constructor called" << std::endl;
-    this->fixedPointValue = copy.fixedPointValue;
 }
 
 Fixed::~Fixed()

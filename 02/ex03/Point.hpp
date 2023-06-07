@@ -9,6 +9,7 @@ class Point{
 		Point();
 		Point(const float x, const float y);
 		Point(Point &Point);
+		Point &operator=(const Point& copy);
 		~Point();
 	private:
 		Fixed const x;

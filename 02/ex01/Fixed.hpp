@@ -11,6 +11,7 @@ class Fixed
 		Fixed(int initValue);
 		Fixed(float initValue);
 		Fixed(Fixed const &copy);
+		Fixed &operator=(const Fixed& copy);
 		~Fixed();
 
 	private:
@@ -22,8 +23,8 @@ class Fixed
 		void	setRawBits(int const raw);
 		float	toFloat(void) const;
 		int		toInt(void) const;
-		Fixed	operator=(const Fixed &copy);
 };
+
 std::ostream &operator<<(std::ostream &os, const Fixed &value);
-bool operator>(const Fixed &obj1, const Fixed &obj2);
+
 #endif

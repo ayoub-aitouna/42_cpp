@@ -36,14 +36,16 @@ void Fixed::setRawBits(int const raw)
 	fixedPointValue = raw;
 }
 
+
 float Fixed::toFloat(void) const
 {
-	return static_cast<float>(this->fixedPointValue) / (1 << fractional_bits);
+	float value = ((float)this->fixedPointValue) / (1 << fractional_bits);
+	return value;
 }
 
 int Fixed::toInt(void) const
 {
-	return (this->fixedPointValue >> fractional_bits);
+	return this->fixedPointValue / (1 << fractional_bits);
 }
 
 Fixed Fixed::operator=(const Fixed &copy)

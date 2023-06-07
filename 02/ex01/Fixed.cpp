@@ -17,13 +17,13 @@ Fixed::Fixed(int initVlaue)
 Fixed::Fixed(float initVlaue)
 {
 	fixedPointValue = roundf(initVlaue * (1 << fractional_bits));
-	std::cout << "Float constructor called " << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->fixedPointValue = copy.getRawBits();
+	*this = copy;
 }
 
 Fixed::~Fixed()
@@ -33,27 +33,26 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return (fixedPointValue);
 }
 
 void Fixed::setRawBits(int const raw)
 {
 	fixedPointValue = raw;
-	std::cout << "setRawBits member function called" << std::endl;
 }
 
 float Fixed::toFloat(void) const
 {
-	return static_cast<float>(this->fixedPointValue) / (1 << fractional_bits);
+	float value = ((float)this->fixedPointValue) / (1 << fractional_bits);
+	return value;
 }
 
 int Fixed::toInt(void) const
 {
-	return (this->fixedPointValue >> fractional_bits);
+	return this->fixedPointValue / (1 << fractional_bits);
 }
 
-Fixed Fixed::operator=(const Fixed &copy)
+Fixed &Fixed::operator=(const Fixed &copy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &copy)
