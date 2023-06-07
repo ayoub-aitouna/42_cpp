@@ -3,11 +3,6 @@
 
 Harl::Harl(std::string filter)
 {
-  m_complains_list["DEBUG"] = &Harl::debug;
-  m_complains_list["INFO"] = &Harl::info;
-  m_complains_list["WARNING"] = &Harl::warning;
-  m_complains_list["ERROR"] = &Harl::error;
-
   levels["DEBUG"] = 1;
   levels["INFO"] = 2;
   levels["WARNING"] = 3;
@@ -23,6 +18,7 @@ void Harl::complain(std::string level)
 {
   this->level = level;
   int filter_level = levels[this->filter];
+  filter_level = filter_level == 0 ? INT_MAX : filter_level;
   int m_level = levels[level];
 
   if (m_level >= filter_level)

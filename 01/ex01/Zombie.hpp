@@ -16,4 +16,5 @@ private:
 public:
     void announce(void);
 };
+Zombie* zombieHorde( int N, std::string name );
 #endif

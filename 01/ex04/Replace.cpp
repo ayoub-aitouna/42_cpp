@@ -15,7 +15,6 @@ std::string Replace::ReplaceInLine(std::string line)
 {
     std::string tmp;
     std::string result;
-
     for (size_t i = 0; i < line.length(); i++)
     {
         tmp += line[i];
@@ -24,10 +23,10 @@ std::string Replace::ReplaceInLine(std::string line)
             result += replacement;
             tmp.clear();
         }
-        if (tmp.length() >= value.length())
+        else if (tmp.length() >= value.length())
         {
-            result += tmp;
-            tmp.clear();
+            result += tmp.at(0);
+            tmp.erase(tmp.begin());
         }
     }
     result += tmp;
@@ -37,15 +36,20 @@ std::string Replace::ReplaceInLine(std::string line)
 void Replace::CopyAndReplace()
 {
     std::ifstream inputFile(inputFileName.c_str());
-    std::string outputFileName = inputFileName + ".replace";
-    std::ofstream outputFile(outputFileName.c_str());
     std::string line;
 
-    if (!inputFile.is_open() || !outputFile.is_open())
+    if (!inputFile.is_open() || !inputFile.good())
     {
-        std::cout << "error trying to open a file " << std::endl;
+        std::cout << "error trying to open a inputFile" << std::endl;
         return;
     }
+    std::ofstream outputFile((inputFileName + ".replace").c_str());
+    if (!outputFile.is_open())
+    {
+        std::cout << "error trying to open a outputFile" << std::endl;
+        return;
+    }
+
     while (std::getline(inputFile, line))
     {
         line += inputFile.peek() != EOF ? "\n" : "";
