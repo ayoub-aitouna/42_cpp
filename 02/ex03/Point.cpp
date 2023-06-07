@@ -39,6 +39,6 @@ const Fixed Point::Gety() const
 
 std::ostream &operator<<(std::ostream &os, Point const &value)
 {
-	os << "(" << value.Getx() << "," << value.Gety() << ")";
+	os << " (" << value.Getx() << "," << value.Gety() << ") ";
 	return (os);
 }

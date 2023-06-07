@@ -48,10 +48,10 @@ int Fixed::toInt(void) const
 	
 }
 
-Fixed Fixed::operator=(const Fixed &copy)
+Fixed &Fixed::operator=(const Fixed &copy)
 {
 	if (this != &copy)
-		this->fixedPointValue = copy.fixedPointValue;
+		this->fixedPointValue = copy.getRawBits();
 	return *this;
 }
 

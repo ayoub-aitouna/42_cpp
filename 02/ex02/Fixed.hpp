@@ -11,7 +11,7 @@ public:
 	Fixed(int initValue);
 	Fixed(float initValue);
 	Fixed(Fixed const &copy);
-	Fixed operator=(const Fixed &value);
+	Fixed &operator=(const Fixed &value);
 	~Fixed();
 
 private:
@@ -27,6 +27,7 @@ public:
 	static const Fixed &min(const Fixed &lhs, const Fixed &rhs);
 	static Fixed &max(Fixed &lhs, Fixed &rhs);
 	static const Fixed &max(const Fixed &lhs, const Fixed &rhs);
+
 	Fixed &operator--();
 	Fixed &operator++();
 	Fixed operator--(int);
