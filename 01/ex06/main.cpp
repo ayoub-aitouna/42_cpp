@@ -14,5 +14,6 @@ int main(int ac, char **av)
     logger.complain("ERROR");
     logger.complain("DEBUG");
     logger.complain("INFO");
+
     return (0);
 }

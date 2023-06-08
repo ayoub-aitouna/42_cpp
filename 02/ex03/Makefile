@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Fixed
+NAME = BSQ
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 

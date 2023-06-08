@@ -1,29 +1,33 @@
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-#include <string>
-#include <iostream>
-#include <sstream>
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-	ScavTrap one("NAME");
-	FragTrap two("NAME");
-	one.attack("banney");
-	for (int i = 0; i < 7; i++)
-	{
-		one.beRepaired(i);
-		two.highFivesGuys();
-	}
-	for (int i = 0; i < 7; i++)
-	{
-		std::ostringstream oss;
-		oss << "enemy_" << i;
-		one.attack(oss.str());
-		two.takeDamage(10);
-		oss.clear();
-	}
-	one.takeDamage(100);
-	two.attack("one_Enemy");
+	DiamondTrap one("ONE");
+	std::cout << std::endl;
+
+	DiamondTrap two("TWO");
+	std::cout << std::endl;
+
+	one.attack("TWO");
+	std::cout << std::endl;
+
+	two.takeDamage(20);
+	std::cout << std::endl;
+	
+	two.beRepaired(2);
+	std::cout << std::endl;
+	
+	two.highFivesGuys();
+	std::cout << std::endl;
+	
+	two.attack("ONE");
+	std::cout << std::endl;
+	
 	one.guardGate();
+	std::cout << std::endl;
+
+	one.whoAmI();
+	std::cout << std::endl;
+	
 	return (0);
 }

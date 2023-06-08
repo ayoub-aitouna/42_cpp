@@ -2,14 +2,14 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = ScavTrap
+NAME = DiamondTrap
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	g++ $(OBJ) $(CPPFLAGS) -o $(NAME)
+	c++ $(OBJ) $(CPPFLAGS) -o $(NAME)
 
 clean : 
 	rm $(OBJ)

@@ -7,18 +7,10 @@ int main(void)
 {
 	ScavTrap one("NAME");
 	one.attack("banney");
-	for (int i = 0; i < 7; i++)
-	{
-		one.beRepaired(i);
-	}
-	for (int i = 0; i < 7; i++)
-	{
-		std::ostringstream oss;
-		oss << "enemy_" << i;
-		one.attack(oss.str());
-		oss.clear();
-	}
+	one.beRepaired(10);
+	one.attack("banney");
 	one.takeDamage(100);
+
 	one.guardGate();
 	return (0);
 }

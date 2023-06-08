@@ -10,9 +10,11 @@ class ClapTrap
 public:
 	ClapTrap();
 	ClapTrap(std::string Name);
+	ClapTrap(const ClapTrap&  copy);
+	ClapTrap &operator=(const ClapTrap&copy);
 	~ClapTrap();
 
-protected:
+private:
 	std::string Name;
 	int HitPoint;
 	int EnergyPoint;
@@ -22,8 +24,5 @@ public:
 	void attack(const std::string &target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
-	void setHitPoint(int HitPoint);
-	void setEnergyPoint(int EnergyPoint);
-	void setAttackDamage(int AttackDamage);
 };
 #endif
