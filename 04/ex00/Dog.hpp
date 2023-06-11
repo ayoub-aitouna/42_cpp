@@ -5,8 +5,11 @@ class Dog : public Animal
 {
 public:
     Dog();
+    Dog(const Dog &);
+    Dog &operator=(const Dog &);
     ~Dog();
+
+public:
     void makeSound(void) const;
-    
 };
 #endif

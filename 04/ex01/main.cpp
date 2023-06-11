@@ -33,5 +33,9 @@ int main()
     {
         delete creature[i];
     }
+    delete tst;
+    delete tst_2;
+    delete Cat_tst;
+    delete Cat_tst_2;
     return 0;
 }

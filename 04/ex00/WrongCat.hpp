@@ -4,12 +4,12 @@
 
 class WrongCat : public WrongAnimal
 {
-private:
-    /* data */
-public:
-    WrongCat(/* args */);
-    ~WrongCat();
-    void makeSound(void) const;
+	public:
+		WrongCat();
+		WrongCat(const WrongCat&);
+		WrongCat &operator=(const WrongCat&);
+		~WrongCat();
+		void makeSound(void) const;
 };
 
 #endif

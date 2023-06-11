@@ -4,12 +4,12 @@ OBJ = $(SRC:.cpp=.o)
 
 NAME = Animals
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98  -fsanitize=address
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	g++ $(OBJ) -o $(NAME)
+	g++ $(OBJ) $(CPPFLAGS) -o $(NAME)
 
 clean :
 	rm $(OBJ)

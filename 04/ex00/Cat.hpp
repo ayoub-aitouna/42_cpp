@@ -4,11 +4,13 @@
 
 class Cat : public Animal
 {
-private:
-    /* data */
 public:
-    Cat(/* args */);
+    Cat();
+    Cat(const Cat &);
+    Cat &operator=(const Cat &);
     ~Cat();
+
+public:
     void makeSound(void) const;
 };
 

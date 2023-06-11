@@ -12,6 +12,7 @@ protected:
 
 public:
 	AMateria(void);
+	AMateria& operator=(const AMateria&);
 	AMateria(std::string const &type);
 	std::string const &getType() const;
 

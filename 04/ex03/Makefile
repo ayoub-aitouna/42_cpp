@@ -2,9 +2,9 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Animals
+NAME = Program
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = # -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
