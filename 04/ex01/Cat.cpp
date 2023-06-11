@@ -6,7 +6,7 @@ Cat::Cat() : brain(new Brain())
     std::cout << "Cat Default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy)
 {
     std::cout << "Cat Copy constructor called" << std::endl;
     *this = copy;
@@ -25,7 +25,7 @@ Cat &Cat::operator=(const Cat &copy)
 
 Cat::~Cat()
 {
-    std::cout << "Cat Default Destructor called" << std::endl;
+    std::cout << "Cat Destructor called" << std::endl;
     delete brain;
 }
 

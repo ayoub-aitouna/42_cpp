@@ -25,7 +25,7 @@ Cat &Cat::operator=(const Cat &copy)
 
 Cat::~Cat()
 {
-    std::cout << "Cat Default Destructor called" << std::endl;
+    std::cout << "Cat Destructor called" << std::endl;
     delete brain;
 }
 

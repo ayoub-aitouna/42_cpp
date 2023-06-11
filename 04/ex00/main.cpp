@@ -11,14 +11,17 @@ int main()
     const Animal *j = new Dog();
     const Animal *i = new Cat();
     const WrongAnimal *y = new WrongCat();
+    const WrongCat *k = new WrongCat();
     std::cout << "j: " << j->getType() << std::endl;
     std::cout << "i: " << i->getType() << std::endl;
     std::cout << "y: " << y->getType() << std::endl;
+    std::cout << "k: " << k->getType() << std::endl;
     std::cout << "meta : " << meta->getType() << std::endl;
     i->makeSound();
     j->makeSound();
     y->makeSound();
     meta->makeSound();
     wrongmeta->makeSound();
+    k->makeSound();
     return 0;
 }

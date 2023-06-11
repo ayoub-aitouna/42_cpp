@@ -14,7 +14,6 @@ int main()
 
     me->equip(tmp);
     tmp = src->createMateria("cure");
-    //me->unequip(0);
     me->equip(tmp);
 
     ICharacter *bob = new Character("bob");
@@ -25,3 +24,5 @@ int main()
     delete src;
     return 0;
 }
+
+//IEE756

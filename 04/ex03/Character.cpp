@@ -20,11 +20,9 @@ Character &Character::operator=(const Character &copy)
 {
     if (this != &copy)
     {
-        for (size_t i = 0; i < 4; i++)
-        {
-            this->m[i] = copy.m[i];
-            this->size = copy.size;
-        }
+        for (size_t i = 0; i < 4; i++)  
+            this->m[i] = copy.m[i]->clone();
+        this->size = copy.size;
     }
     return *this;
 }

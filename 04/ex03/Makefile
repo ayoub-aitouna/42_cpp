@@ -4,12 +4,12 @@ OBJ = $(SRC:.cpp=.o)
 
 NAME = Program
 
-CPPFLAGS = # -Wall -Wextra -Werror -std=c++98
+CPPFLAGS =  -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	g++ $(OBJ) -o $(NAME)
+	c++ $(OBJ) -o $(NAME)
 
 clean :
 	rm $(OBJ)

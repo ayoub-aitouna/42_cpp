@@ -9,7 +9,7 @@ public:
     Cat();
     Cat(const Cat &);
     Cat &operator=(const Cat &);
-    ~Cat();
+    virtual ~Cat();
 
 private:
     Brain *brain;

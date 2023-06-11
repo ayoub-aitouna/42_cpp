@@ -9,7 +9,7 @@ public:
     Dog();
     Dog(const Dog &);
     Dog &operator=(const Dog &);
-    ~Dog();
+   virtual ~Dog();
 
 private:
     Brain *brain;

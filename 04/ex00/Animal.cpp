@@ -23,8 +23,9 @@ Animal &Animal::operator=(const Animal &animal)
 
 Animal::~Animal()
 {
-	std::cout << "Animal Default Destructor called" << std::endl;
+	std::cout << "Animal Destructor called" << std::endl;
 }
+
 void Animal::makeSound(void) const
 {
 	std::cout << "no Sound specified !!" << std::endl;

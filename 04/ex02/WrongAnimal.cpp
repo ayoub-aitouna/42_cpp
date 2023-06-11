@@ -25,7 +25,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal& copy)
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "WrongAnimal Default Destructor called" << std::endl;
+	std::cout << "WrongAnimal Destructor called" << std::endl;
 }
 
 void WrongAnimal::makeSound(void) const
