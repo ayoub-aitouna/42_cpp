@@ -1,9 +1,11 @@
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("<target>", 25, 5) {}
+int RobotomyRequestForm::RobotomyRequestList = 0;
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(target, 25, 5) {}
+RobotomyRequestForm::RobotomyRequestForm() : AForm("<target>", 72, 45) {}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(target, 72, 45) {}
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &lhs)
 {
@@ -24,4 +26,5 @@ RobotomyRequestForm::~RobotomyRequestForm()
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
     check_permisions(executor);
+    std::cout << executor.getName() << " " << ((++RobotomyRequestList % 2) ? "has been robotomized successfully" : " robotomy failed") << std::endl;
 }

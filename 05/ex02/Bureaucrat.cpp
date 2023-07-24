@@ -52,6 +52,19 @@ void Bureaucrat::decrement()
 	if (this->grade > 150)
 		throw GradeTooLowException();
 }
+
+void Bureaucrat::executeForm(AForm const &form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
 void Bureaucrat::signForm(AForm &form)
 {
 	if (form.beSigned(*this))

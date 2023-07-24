@@ -26,7 +26,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     check_permisions(executor);
     std::string fileName = this->getName() + "_shrubbery";
     std::ofstream outputfile(fileName.c_str());
-    std::string line;
     if (!outputfile.is_open())
         throw ShrubberyCreationForm::FileException();
     outputfile << "                      ___" << std::endl;
