@@ -14,6 +14,7 @@ PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm
 {
     if(this != &lhs)
         AForm::operator=(lhs);
+    return (*this);
 }
 
 PresidentialPardonForm::~PresidentialPardonForm()
@@ -22,5 +23,6 @@ PresidentialPardonForm::~PresidentialPardonForm()
 
 void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-    
+       check_permisions(executor);
+       
 }

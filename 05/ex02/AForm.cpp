@@ -18,7 +18,7 @@ AForm::AForm(std::string name, int requredGradeToSign, int requiredGradeToExecut
 		throw AForm::GradeTooLowException();
 }
 
-AForm &AForm::operator=(const AForm &lhs)
+AForm	&AForm::operator=(const AForm &lhs)
 {
 	if (this != &lhs)
 	{
@@ -30,29 +30,37 @@ AForm &AForm::operator=(const AForm &lhs)
 	return (*this);
 }
 
-std::string AForm::getName() const
+std::string	AForm::getName() const
 {
 	return (this->name);
 }
 
-bool AForm::getSigned() const
+bool	AForm::getSigned() const
 {
 	return (this->singed);
 }
 
-int AForm::getRequredGradeToSign() const
+int	AForm::getRequredGradeToSign() const
 {
 	return (this->requredGradeToSign);
 }
 
-int AForm::getRequiredGradeToExecute() const
+int	AForm::getRequiredGradeToExecute() const
 {
 	return (this->requiredGradeToExecute);
 }
 
-bool AForm::beSigned(Bureaucrat &bureaucrat)
+bool	AForm::beSigned(Bureaucrat &bureaucrat)
 {
 	return (this->singed = bureaucrat.getGrade() <= this->requredGradeToSign);
+}
+
+void	AForm::check_permisions(Bureaucrat const & executor) const
+{
+	if(!this->singed)
+		throw AForm::UnSignedException();
+	if(this->requiredGradeToExecute < executor.getGrade())
+		throw AForm::GradeTooLowException();
 }
 
 std::ostream &operator<<(std::ostream& os, const AForm& value)

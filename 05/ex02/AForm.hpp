@@ -21,12 +21,14 @@ class AForm
 	const int requiredGradeToExecute;
 
 	public:
-		std::string getName() const;
-		bool getSigned() const;
-		int getRequredGradeToSign() const;
-		int getRequiredGradeToExecute() const;
-		bool beSigned(Bureaucrat& bureaucrat);
-		virtual void execute(Bureaucrat const & executor) const = 0;
+		std::string		getName() const;
+		bool			getSigned() const;
+		int				getRequredGradeToSign() const;
+		int				getRequiredGradeToExecute() const;
+		bool			beSigned(Bureaucrat& bureaucrat);
+		void			check_permisions(Bureaucrat const & executor) const;
+		virtual void	execute(Bureaucrat const & executor) const = 0;
+  
   public:
 	class GradeTooHighException : public std::exception
 	{
@@ -34,6 +36,14 @@ class AForm
 		const char *what() const throw()
 		{
 			return "too high grade";
+		}
+	};
+	class UnSignedException : public std::exception
+	{
+	  public:
+		const char *what() const throw()
+		{
+			return "the form need to be singed first";
 		}
 	};
 	class GradeTooLowException : public std::exception
