@@ -103,6 +103,9 @@ CPPFLAGS	05/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	05/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	05/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CPPFLAGS	05/ex03/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
+CPPFLAGS	06/ex00/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
+CPPFLAGS	06/ex01/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
+CPPFLAGS	06/ex02/Makefile	/^CPPFLAGS = -Wall -Wextra -Werror -std=c++98$/;"	m
 CURE_HPP	04/ex03/Cure.hpp	2;"	d
 Cat	04/ex00/Cat.cpp	/^Cat::Cat()$/;"	f	class:Cat
 Cat	04/ex00/Cat.cpp	/^Cat::Cat(const Cat &copy)$/;"	f	class:Cat
@@ -248,7 +251,7 @@ INTERN_HPP	05/ex03/Intern.hpp	2;"	d
 Ice	04/ex03/Ice.cpp	/^Ice::Ice()$/;"	f	class:Ice
 Ice	04/ex03/Ice.cpp	/^Ice::Ice(const Ice &copy)$/;"	f	class:Ice
 Ice	04/ex03/Ice.hpp	/^class Ice : public AMateria$/;"	c
-IndexOf	05/ex03/Intern.cpp	/^int IndexOf(std::string list[],int size, std::string item)$/;"	f
+IndexOf	05/ex03/Intern.cpp	/^int IndexOf(std::string list[], int size, std::string item)$/;"	f
 Intern	05/ex03/Intern.cpp	/^Intern::Intern()$/;"	f	class:Intern
 Intern	05/ex03/Intern.cpp	/^Intern::Intern(const Intern &lhs)$/;"	f	class:Intern
 Intern	05/ex03/Intern.hpp	/^class Intern$/;"	c
@@ -285,6 +288,9 @@ NAME	05/ex00/Makefile	/^NAME = Bureaucrat$/;"	m
 NAME	05/ex01/Makefile	/^NAME = Bureaucrat$/;"	m
 NAME	05/ex02/Makefile	/^NAME = Bureaucrat$/;"	m
 NAME	05/ex03/Makefile	/^NAME = Bureaucrat$/;"	m
+NAME	06/ex00/Makefile	/^NAME = Converter$/;"	m
+NAME	06/ex01/Makefile	/^NAME = Bureaucrat$/;"	m
+NAME	06/ex02/Makefile	/^NAME = Bureaucrat$/;"	m
 Name	03/ex00/ClapTrap.hpp	/^	std::string Name;$/;"	m	class:ClapTrap
 Name	03/ex01/ClapTrap.hpp	/^	std::string Name;$/;"	m	class:ClapTrap
 Name	03/ex02/ClapTrap.hpp	/^	std::string Name;$/;"	m	class:ClapTrap
@@ -316,6 +322,9 @@ OBJ	05/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	05/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	05/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OBJ	05/ex03/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	06/ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	06/ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	06/ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 PHONE_BOOK_HPP	00/ex01/PhoneBook.hpp	2;"	d
 POINT_HPP	02/ex03/Point.hpp	2;"	d
 PRESIDENTIALPARDONFORM_HPP	05/ex02/PresidentialPardonForm.hpp	2;"	d
@@ -355,6 +364,7 @@ RobotomyRequestList	05/ex02/RobotomyRequestForm.cpp	/^int RobotomyRequestForm::R
 RobotomyRequestList	05/ex02/RobotomyRequestForm.hpp	/^    static int RobotomyRequestList;$/;"	m	class:RobotomyRequestForm
 RobotomyRequestList	05/ex03/RobotomyRequestForm.cpp	/^int RobotomyRequestForm::RobotomyRequestList = 0;$/;"	m	class:RobotomyRequestForm	file:
 RobotomyRequestList	05/ex03/RobotomyRequestForm.hpp	/^    static int RobotomyRequestList;$/;"	m	class:RobotomyRequestForm
+SCALARCONVERTER_HPP	06/ex00/ScalarConverter.hpp	2;"	d
 SCAV_TRAP_HPP	03/ex01/ScavTrap.hpp	2;"	d
 SCAV_TRAP_HPP	03/ex02/ScavTrap.hpp	2;"	d
 SCAV_TRAP_HPP	03/ex03/ScavTrap.hpp	2;"	d
@@ -386,6 +396,12 @@ SRC	05/ex00/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	05/ex01/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	05/ex02/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
 SRC	05/ex03/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+SRC	06/ex00/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+SRC	06/ex01/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+SRC	06/ex02/Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+ScalarConverter	06/ex00/ScalarConverter.cpp	/^ScalarConverter::ScalarConverter()$/;"	f	class:ScalarConverter
+ScalarConverter	06/ex00/ScalarConverter.cpp	/^ScalarConverter::ScalarConverter(const ScalarConverter &lhs)$/;"	f	class:ScalarConverter
+ScalarConverter	06/ex00/ScalarConverter.hpp	/^class ScalarConverter$/;"	c
 ScavTrap	03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap() : ClapTrap()$/;"	f	class:ScavTrap
 ScavTrap	03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap(const ScavTrap &copy)$/;"	f	class:ScavTrap
 ScavTrap	03/ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)$/;"	f	class:ScavTrap
@@ -412,6 +428,11 @@ ShrubberyCreationForm	05/ex03/ShrubberyCreationForm.cpp	/^ShrubberyCreationForm:
 ShrubberyCreationForm	05/ex03/ShrubberyCreationForm.cpp	/^ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &lhs) : AForm(lhs)$/;"	f	class:ShrubberyCreationForm
 ShrubberyCreationForm	05/ex03/ShrubberyCreationForm.cpp	/^ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm(target, 145, 137) {}$/;"	f	class:ShrubberyCreationForm
 ShrubberyCreationForm	05/ex03/ShrubberyCreationForm.hpp	/^class ShrubberyCreationForm: public AForm$/;"	c
+T_CHAR	06/ex00/ScalarConverter.hpp	/^	T_CHAR = 0,$/;"	e	enum:type
+T_DOUBLE	06/ex00/ScalarConverter.hpp	/^	T_DOUBLE = 3$/;"	e	enum:type
+T_FLOAT	06/ex00/ScalarConverter.hpp	/^	T_FLOAT = 2,$/;"	e	enum:type
+T_INT	06/ex00/ScalarConverter.hpp	/^	T_INT = 1,$/;"	e	enum:type
+T_NPOS	06/ex00/ScalarConverter.hpp	/^	T_NPOS = -1,$/;"	e	enum:type
 Type	04/ex03/AMateria.hpp	/^	std::string Type;$/;"	m	class:AMateria
 UnSignedException	05/ex02/AForm.hpp	/^	class UnSignedException : public std::exception$/;"	c	class:AForm
 UnSignedException	05/ex03/AForm.hpp	/^	class UnSignedException : public std::exception$/;"	c	class:AForm
@@ -491,6 +512,7 @@ brain	04/ex01/Dog.hpp	/^    Brain *brain;$/;"	m	class:Dog
 brain	04/ex02/Cat.hpp	/^    Brain *brain;$/;"	m	class:Cat
 brain	04/ex02/Dog.hpp	/^    Brain *brain;$/;"	m	class:Dog
 bsq	02/ex03/bsp.cpp	/^bool bsq(Point const a, Point const b, Point const c, Point const point)$/;"	f
+c_value	06/ex00/ScalarConverter.hpp	/^		static char c_value;$/;"	m	class:ScalarConverter
 checkAmount	00/ex02/Account.cpp	/^int Account::checkAmount(void) const$/;"	f	class:Account
 check_permisions	05/ex02/AForm.cpp	/^void	AForm::check_permisions(Bureaucrat const & executor) const$/;"	f	class:AForm
 check_permisions	05/ex03/AForm.cpp	/^void	AForm::check_permisions(Bureaucrat const & executor) const$/;"	f	class:AForm
@@ -498,7 +520,9 @@ clone	04/ex03/Cure.cpp	/^AMateria *Cure::clone() const$/;"	f	class:Cure
 clone	04/ex03/Ice.cpp	/^AMateria *Ice::clone() const$/;"	f	class:Ice
 complain	01/ex05/Harl.cpp	/^void Harl::complain(std::string level)$/;"	f	class:Harl
 complain	01/ex06/Harl.cpp	/^void Harl::complain(std::string level)$/;"	f	class:Harl
+convert	06/ex00/ScalarConverter.cpp	/^void ScalarConverter::convert(std::string initial_value)$/;"	f	class:ScalarConverter
 createMateria	04/ex03/MateriaSource.cpp	/^AMateria *MateriaSource::createMateria(std::string const &type)$/;"	f	class:MateriaSource
+d_value	06/ex00/ScalarConverter.hpp	/^		static double d_value;$/;"	m	class:ScalarConverter
 debug	01/ex05/Harl.cpp	/^void Harl::debug(void)$/;"	f	class:Harl
 debug	01/ex06/Harl.cpp	/^void Harl::debug(void)$/;"	f	class:Harl
 decrement	05/ex00/Bureaucrat.cpp	/^void Bureaucrat::decrement()$/;"	f	class:Bureaucrat
@@ -507,6 +531,7 @@ decrement	05/ex02/Bureaucrat.cpp	/^void Bureaucrat::decrement()$/;"	f	class:Bure
 decrement	05/ex03/Bureaucrat.cpp	/^void Bureaucrat::decrement()$/;"	f	class:Bureaucrat
 displayAccountsInfos	00/ex02/Account.cpp	/^void Account::displayAccountsInfos(void)$/;"	f	class:Account
 displayStatus	00/ex02/Account.cpp	/^void Account::displayStatus(void) const$/;"	f	class:Account
+double_type_validator	06/ex00/ScalarConverter.cpp	/^bool double_type_validator(std::string str)$/;"	f
 equip	04/ex03/Character.cpp	/^void Character::equip(AMateria *m)$/;"	f	class:Character
 error	01/ex05/Harl.cpp	/^void Harl::error(void)$/;"	f	class:Harl
 error	01/ex06/Harl.cpp	/^void Harl::error(void)$/;"	f	class:Harl
@@ -518,12 +543,14 @@ execute	05/ex03/RobotomyRequestForm.cpp	/^void RobotomyRequestForm::execute(Bure
 execute	05/ex03/ShrubberyCreationForm.cpp	/^void ShrubberyCreationForm::execute(Bureaucrat const &executor) const$/;"	f	class:ShrubberyCreationForm
 executeForm	05/ex02/Bureaucrat.cpp	/^void Bureaucrat::executeForm(AForm const &form)$/;"	f	class:Bureaucrat
 executeForm	05/ex03/Bureaucrat.cpp	/^void Bureaucrat::executeForm(AForm const &form)$/;"	f	class:Bureaucrat
+f_value	06/ex00/ScalarConverter.hpp	/^		static float f_value;$/;"	m	class:ScalarConverter
 filled	00/ex01/PhoneBook.hpp	/^	int filled;$/;"	m	class:PhoneBook
 filter	01/ex06/Harl.hpp	/^    std::string filter;$/;"	m	class:Harl
 fixedPointValue	02/ex00/Fixed.hpp	/^    int fixedPointValue;$/;"	m	class:Fixed
 fixedPointValue	02/ex01/Fixed.hpp	/^		int					fixedPointValue;$/;"	m	class:Fixed
 fixedPointValue	02/ex02/Fixed.hpp	/^	int fixedPointValue;$/;"	m	class:Fixed
 fixedPointValue	02/ex03/Fixed.hpp	/^	int fixedPointValue;$/;"	m	class:Fixed
+float_type_validator	06/ex00/ScalarConverter.cpp	/^bool float_type_validator(std::string str)$/;"	f
 fractional_bits	02/ex00/Fixed.cpp	/^const int Fixed::fractional_bits = 8;$/;"	m	class:Fixed	file:
 fractional_bits	02/ex00/Fixed.hpp	/^    static const int fractional_bits;$/;"	m	class:Fixed
 fractional_bits	02/ex01/Fixed.cpp	/^const int Fixed::fractional_bits = 8;$/;"	m	class:Fixed	file:
@@ -573,6 +600,7 @@ getType	04/ex01/WrongAnimal.cpp	/^std::string WrongAnimal::getType(void) const$/
 getType	04/ex02/Animal.cpp	/^std::string Animal::getType(void) const$/;"	f	class:Animal
 getType	04/ex02/WrongAnimal.cpp	/^std::string WrongAnimal::getType(void) const$/;"	f	class:WrongAnimal
 getType	04/ex03/AMateria.cpp	/^std::string const &AMateria::getType() const$/;"	f	class:std::AMateria
+get_type	06/ex00/ScalarConverter.cpp	/^int get_type(std::string str)$/;"	f
 grade	05/ex00/Bureaucrat.hpp	/^	int grade;$/;"	m	class:Bureaucrat
 grade	05/ex01/Bureaucrat.hpp	/^	int grade;$/;"	m	class:Bureaucrat
 grade	05/ex02/Bureaucrat.hpp	/^	int grade;$/;"	m	class:Bureaucrat
@@ -583,6 +611,7 @@ guardGate	03/ex03/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap
 harl_voice	01/ex06/Harl.hpp	/^    typedef void (Harl::*harl_voice)();$/;"	t	class:Harl
 highFivesGuys	03/ex02/FragTrap.cpp	/^void FragTrap::highFivesGuys()$/;"	f	class:FragTrap
 highFivesGuys	03/ex03/FragTrap.cpp	/^void FragTrap::highFivesGuys()$/;"	f	class:FragTrap
+i_value	06/ex00/ScalarConverter.hpp	/^		static int i_value;$/;"	m	class:ScalarConverter
 ideas	04/ex01/Brain.hpp	/^    std::string ideas[100];$/;"	m	class:Brain
 ideas	04/ex02/Brain.hpp	/^    std::string ideas[100];$/;"	m	class:Brain
 increment	05/ex00/Bureaucrat.cpp	/^void Bureaucrat::increment()$/;"	f	class:Bureaucrat
@@ -593,6 +622,8 @@ index	00/ex01/PhoneBook.hpp	/^	int index;$/;"	m	class:PhoneBook
 info	01/ex05/Harl.cpp	/^void Harl::info(void)$/;"	f	class:Harl
 info	01/ex06/Harl.cpp	/^void Harl::info(void)$/;"	f	class:Harl
 inputFileName	01/ex04/Replace.hpp	/^    std::string inputFileName;$/;"	m	class:Replace
+is_all_num	06/ex00/ScalarConverter.cpp	/^bool is_all_num(std::string str, int size)$/;"	f
+is_number	06/ex00/ScalarConverter.cpp	/^bool is_number(char c)$/;"	f
 known_materia	04/ex03/MateriaSource.hpp	/^    std::map<std::string, AMateria *> known_materia;$/;"	m	class:MateriaSource
 learnMateria	04/ex03/MateriaSource.cpp	/^void MateriaSource::learnMateria(AMateria *Material)$/;"	f	class:MateriaSource
 level	01/ex06/Harl.hpp	/^    std::string level;$/;"	m	class:Harl
@@ -630,6 +661,7 @@ main	05/ex00/main.cpp	/^int main()$/;"	f
 main	05/ex01/main.cpp	/^int main()$/;"	f
 main	05/ex02/main.cpp	/^int main()$/;"	f
 main	05/ex03/main.cpp	/^int main()$/;"	f
+main	06/ex00/main.cpp	/^int main()$/;"	f
 makeDeposit	00/ex02/Account.cpp	/^void Account::makeDeposit(int deposit)$/;"	f	class:Account
 makeForm	05/ex03/Intern.cpp	/^AForm *Intern::makeForm(std::string FormName, std::string Target)$/;"	f	class:Intern
 makeSound	04/ex00/Animal.cpp	/^void Animal::makeSound(void) const$/;"	f	class:Animal
@@ -753,6 +785,7 @@ operator =	05/ex03/Intern.cpp	/^Intern &Intern::operator=(const Intern &lhs)$/;"
 operator =	05/ex03/PresidentialPardonForm.cpp	/^PresidentialPardonForm &PresidentialPardonForm::operator=(PresidentialPardonForm &lhs)$/;"	f	class:PresidentialPardonForm
 operator =	05/ex03/RobotomyRequestForm.cpp	/^RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm &lhs)$/;"	f	class:RobotomyRequestForm
 operator =	05/ex03/ShrubberyCreationForm.cpp	/^ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm &lhs)$/;"	f	class:ShrubberyCreationForm
+operator =	06/ex00/ScalarConverter.cpp	/^ScalarConverter &ScalarConverter::operator=(const ScalarConverter &lhs)$/;"	f	class:ScalarConverter
 operator ==	02/ex02/Fixed.cpp	/^bool Fixed::operator==(const Fixed &rhs) const$/;"	f	class:Fixed
 operator ==	02/ex03/Fixed.cpp	/^bool Fixed::operator==(const Fixed &rhs) const$/;"	f	class:Fixed
 operator >	02/ex02/Fixed.cpp	/^bool Fixed::operator>(const Fixed &rhs) const$/;"	f	class:Fixed
@@ -760,6 +793,7 @@ operator >	02/ex03/Fixed.cpp	/^bool Fixed::operator>(const Fixed &rhs) const$/;"
 operator >=	02/ex02/Fixed.cpp	/^bool Fixed::operator>=(const Fixed &rhs) const$/;"	f	class:Fixed
 operator >=	02/ex03/Fixed.cpp	/^bool Fixed::operator>=(const Fixed &rhs) const$/;"	f	class:Fixed
 printInBox	00/ex01/PhoneBook.cpp	/^void printInBox(std::string value)$/;"	f
+print_result	06/ex00/ScalarConverter.cpp	/^void print_result()$/;"	f
 randomChump	01/ex00/randomChump.cpp	/^void randomChump(std::string name)$/;"	f
 replacement	01/ex04/Replace.hpp	/^    std::string replacement;$/;"	m	class:Replace
 requiredGradeToExecute	05/ex01/Form.hpp	/^	const int requiredGradeToExecute;$/;"	m	class:Form
@@ -783,6 +817,7 @@ singed	05/ex02/AForm.hpp	/^	bool singed;$/;"	m	class:AForm
 singed	05/ex03/AForm.hpp	/^	bool singed;$/;"	m	class:AForm
 size	04/ex03/Character.hpp	/^    int size;$/;"	m	class:Character
 t	00/ex02/Account.hpp	/^    typedef Account t;$/;"	t	class:Account
+t_type	06/ex00/ScalarConverter.hpp	/^} t_type;$/;"	t	typeref:enum:type
 takeDamage	03/ex00/Claptrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap
 takeDamage	03/ex01/Claptrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap
 takeDamage	03/ex02/Claptrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap
@@ -800,6 +835,7 @@ type	04/ex01/Animal.hpp	/^    std::string type;$/;"	m	class:Animal
 type	04/ex01/WrongAnimal.hpp	/^		std::string type;$/;"	m	class:WrongAnimal
 type	04/ex02/Animal.hpp	/^    std::string type;$/;"	m	class:Animal
 type	04/ex02/WrongAnimal.hpp	/^		std::string type;$/;"	m	class:WrongAnimal
+type	06/ex00/ScalarConverter.hpp	/^typedef enum type$/;"	g
 unequip	04/ex03/Character.cpp	/^void Character::unequip(int idx)$/;"	f	class:Character
 use	04/ex03/AMateria.cpp	/^void AMateria::use(ICharacter &target)$/;"	f	class:AMateria
 use	04/ex03/Character.cpp	/^void Character::use(int idx, ICharacter &target)$/;"	f	class:Character
@@ -882,6 +918,7 @@ zombieHorde	01/ex01/ZombieHorde.cpp	/^Zombie* zombieHorde( int N, std::string na
 ~Replace	01/ex04/Replace.cpp	/^Replace::~Replace()$/;"	f	class:Replace
 ~RobotomyRequestForm	05/ex02/RobotomyRequestForm.cpp	/^RobotomyRequestForm::~RobotomyRequestForm()$/;"	f	class:RobotomyRequestForm
 ~RobotomyRequestForm	05/ex03/RobotomyRequestForm.cpp	/^RobotomyRequestForm::~RobotomyRequestForm()$/;"	f	class:RobotomyRequestForm
+~ScalarConverter	06/ex00/ScalarConverter.cpp	/^ScalarConverter::~ScalarConverter()$/;"	f	class:ScalarConverter
 ~ScavTrap	03/ex01/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
 ~ScavTrap	03/ex02/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
 ~ScavTrap	03/ex03/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
