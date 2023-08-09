@@ -1,7 +1,8 @@
 #include "ScalarConverter.hpp"
 
-int main()
+int	main(int ac, char **av)
 {
-    ScalarConverter::convert("65");
-    return 0;
+	if (ac == 2)
+		ScalarConverter::convert(av[1]);
+	return (0);
 }

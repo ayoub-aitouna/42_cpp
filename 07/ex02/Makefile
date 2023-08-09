@@ -2,9 +2,9 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = MyType
+NAME = Array
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS =  -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 

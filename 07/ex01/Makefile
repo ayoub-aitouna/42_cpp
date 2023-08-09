@@ -2,14 +2,14 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = MyType
+NAME = Iter
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS =-Wall -Wextra -Werror -std=c++98 
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	c++ $(CPPFLAGS) $(OBJ) -o $(NAME)
+	g++ $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean :
 	rm $(OBJ)

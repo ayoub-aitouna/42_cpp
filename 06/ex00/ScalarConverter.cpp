@@ -1,5 +1,13 @@
 #include "ScalarConverter.hpp"
+#include <cstdio>
 #include <cstdlib>
+#include <cstring>
+
+float ScalarConverter::f_value = 0;
+double ScalarConverter::d_value = 0;
+int ScalarConverter::i_value = 0;
+char ScalarConverter::c_value = 0;
+std::string ScalarConverter::str = "";
 
 ScalarConverter::ScalarConverter()
 {
@@ -9,65 +17,70 @@ ScalarConverter::ScalarConverter(const ScalarConverter &lhs)
 {
 	*this = lhs;
 }
+
 ScalarConverter &ScalarConverter::operator=(const ScalarConverter &lhs)
 {
 	(void)lhs;
 	return (*this);
 }
 
-bool	is_number(char c)
+void ScalarConverter::print_char()
 {
-	return (c > '0' && c < '9');
+	std::cout << "char: ";
+	if (is_pseudo_literals(str))
+		std::cout
+			<< "imposible" << std::endl;
+	else if (!std::isprint(c_value))
+		std::cout
+			<< "Non displayable" << std::endl;
+	else
+		std::cout << c_value << std::endl;
 }
-bool	is_all_num(std::string str, int size)
+
+void ScalarConverter::print_int()
 {
-	for (size_t i = 0; i < size; i++)
+	std::cout << "int: ";
+	if (is_pseudo_literals(str))
+		std::cout
+			<< "imposible" << std::endl;
+	else
+		std::cout << i_value << std::endl;
+}
+
+void ScalarConverter::print_float()
+{
+	std::cout << "float: ";
+	if (is_pseudo_literals(str))
 	{
-		if (!is_number(str.at(i)))
-			return (false);
+		if (str == "+inf")
+			std::cout << "+inff" << std::endl;
+		else if (str == "-inf")
+			std::cout << "-inff" << std::endl;
+		else if (str == "nan")
+			std::cout << "nanf" << std::endl;
+		else
+			std::cout << str << std::endl;
 	}
-	return (true);
-}
-
-bool	float_type_validator(std::string str)
-{
-	int	dot_index;
-	int	f_index;
-
-	dot_index = str.find_first_of('.');
-	f_index = str.find_first_of('f');
-	if (dot_index == -1 || f_index == -1 || (f_index - dot_index) != 1)
-		return (false);
 	else
-		return (is_all_num(str, dot_index));
+		std::cout << f_value << std::endl;
 }
 
-bool	double_type_validator(std::string str)
+void ScalarConverter::print_double()
 {
-	int	f_index;
-
-	f_index = str.find_first_of('f');
-	if (f_index == -1)
-		return (false);
+	std::cout << "double: ";
+	if (is_pseudo_literals(str))
+	{
+		if (str == "+inff")
+			std::cout << "+inf" << std::endl;
+		else if (str == "-inff")
+			std::cout << "-inf" << std::endl;
+		else if (str == "nanf")
+			std::cout << "nan" << std::endl;
+		else
+			std::cout << str << std::endl;
+	}
 	else
-		return (is_all_num(str, f_index));
-}
-
-int	get_type(std::string str)
-{
-	if (str.length() == 1)
-		return (T_CHAR);
-	if (float_type_validator(str))
-		return (T_FLOAT);
-	if (double_type_validator(str))
-		return (T_DOUBLE);
-	if (is_all_num(str, str.length()))
-		return (T_DOUBLE);
-	return (T_NPOS);
-}
-
-void	print_result(void)
-{
+		std::cout << d_value << std::endl;
 }
 
 void ScalarConverter::convert(std::string initial_value)
@@ -85,23 +98,29 @@ void ScalarConverter::convert(std::string initial_value)
 		break ;
 	case T_INT:
 		i_value = atoi(initial_value.c_str());
-		c_value = static_cast<int>(i_value);
+		c_value = static_cast<char>(i_value);
 		f_value = static_cast<float>(i_value);
 		d_value = static_cast<double>(i_value);
 		break ;
 	case T_FLOAT:
 		f_value = atof(initial_value.c_str());
-		c_value = static_cast<int>(f_value);
-		i_value = static_cast<float>(f_value);
+		c_value = static_cast<char>(f_value);
+		i_value = static_cast<int>(f_value);
 		d_value = static_cast<double>(f_value);
 		break ;
 	case T_DOUBLE:
-		f_value = atof(initial_value.c_str());
+		d_value = atof(initial_value.c_str());
+		c_value = static_cast<char>(d_value);
+		i_value = static_cast<int>(d_value);
+		f_value = static_cast<float>(d_value);
 		break ;
 	case T_NPOS:
 		break ;
 	}
-	print_result();
+	print_char();
+	print_int();
+	print_float();
+	print_double();
 }
 
 ScalarConverter::~ScalarConverter()

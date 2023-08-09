@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Bureaucrat
+NAME = Serializer
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
