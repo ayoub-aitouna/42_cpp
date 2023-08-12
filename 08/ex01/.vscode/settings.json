@@ -1,8 +1,9 @@
 {
-    "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
         "*.h": "c",
         "*.c": "c",
+        "iostream": "cpp",
+        "stdexcept": "cpp",
         "cctype": "cpp",
         "clocale": "cpp",
         "cmath": "cpp",
@@ -48,7 +49,6 @@
         "initializer_list": "cpp",
         "iomanip": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
         "mutex": "cpp",
@@ -56,28 +56,8 @@
         "ostream": "cpp",
         "shared_mutex": "cpp",
         "sstream": "cpp",
-        "stdexcept": "cpp",
         "streambuf": "cpp",
         "thread": "cpp",
-        "typeinfo": "cpp",
-        "__bit_reference": "cpp",
-        "__config": "cpp",
-        "__debug": "cpp",
-        "__errc": "cpp",
-        "__functional_base": "cpp",
-        "__hash_table": "cpp",
-        "__locale": "cpp",
-        "__mutex_base": "cpp",
-        "__node_handle": "cpp",
-        "__nullptr": "cpp",
-        "__split_buffer": "cpp",
-        "__string": "cpp",
-        "__threading_support": "cpp",
-        "__tuple": "cpp",
-        "bitset": "cpp",
-        "ios": "cpp",
-        "locale": "cpp",
-        "*.tpp": "c",
-        "mutantstack.hpp": "c"
+        "typeinfo": "cpp"
     }
 }

@@ -2,7 +2,7 @@ SRC = $(wildcard *.cpp)
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = ss
+NAME = MutantStack
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
