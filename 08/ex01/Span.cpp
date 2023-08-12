@@ -1,14 +1,14 @@
 #include "Span.hpp"
 
-Span::Span() : N(0)
+Span::Span() : N(0), sorted(false)
 {
 }
 
-Span::Span(unsigned int N) : N(N)
+Span::Span(unsigned int N) : N(N), sorted(false)
 {
 }
 
-Span::Span(Span &lhs)
+Span::Span(const Span &lhs)
 {
 	*this = lhs;
 }
@@ -26,7 +26,9 @@ Span &Span::operator=(const Span &lhs)
 
 void Span::sort()
 {
-	std::sort(container.begin(), container.end());
+	if (!this->sorted)
+		std::sort(container.begin(), container.end());
+	this->sorted = true;
 }
 
 void Span::addNumber(int number)
@@ -34,7 +36,7 @@ void Span::addNumber(int number)
 	if (container.size() >= N)
 		throw std::runtime_error("index out of bound exception");
 	container.push_back(number);
-	sort();
+	this->sorted = false;
 }
 
 void Span::addNumber(std::vector<int>::iterator beign, std::vector<int>::iterator end)
@@ -42,11 +44,13 @@ void Span::addNumber(std::vector<int>::iterator beign, std::vector<int>::iterato
 	if (container.size() >= N)
 		throw std::runtime_error("index out of bound exception");
 	this->container.assign(beign, end);
-	sort();
+	this->sorted = false;
 }
 
 int Span::shortestSpan()
 {
+
+	sort();
 	int shortest_value = std::numeric_limits<int>::max();
 	int tmp = 0;
 	if (container.size() == 1)
@@ -61,6 +65,7 @@ int Span::shortestSpan()
 }
 int Span::longestSpan()
 {
+	sort();
 	if (container.size() == 1)
 		throw std::runtime_error("invalide number of numbers");
 	return (this->container.at(this->container.size() - 1) - this->container.at(0));

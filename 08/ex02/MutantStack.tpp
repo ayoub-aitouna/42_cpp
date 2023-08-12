@@ -29,4 +29,5 @@ MutantStack<T>::~MutantStack()
 {
 }
 
+
 #endif

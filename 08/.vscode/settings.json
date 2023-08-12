@@ -78,6 +78,7 @@
         "ios": "cpp",
         "locale": "cpp",
         "*.tpp": "c",
-        "mutantstack.hpp": "c"
+        "mutantstack.hpp": "c",
+        "stack": "cpp"
     }
 }

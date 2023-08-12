@@ -10,6 +10,11 @@ public:
 	MutantStack &operator=(const MutantStack &lhs);
 	~MutantStack();
 
+public:
+	typedef iterator c::iterator;
+	iterator begin();
+	iterator end();
+
 private:
 };
 #include "MutantStack.tpp"

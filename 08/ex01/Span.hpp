@@ -15,7 +15,7 @@ class Span
 public:
     Span();
     Span(unsigned int N);
-    Span(Span &lhs);
+    Span(const Span &lhs);
     Span &operator=(const Span &lhs);
     ~Span();
 
@@ -28,6 +28,7 @@ public:
 
 private:
     unsigned int N;
+    bool		sorted;
     std::vector<int> container;
 };
 
