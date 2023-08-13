@@ -2,7 +2,7 @@
 #define MUTANTSTACK_HPP
 #include <stack>
 template <typename T>
-class MutantStack : public std::stack<T>
+class MutantStack : public std::stack<T, std::deque<T> >
 {
 public:
 	MutantStack();
@@ -11,7 +11,7 @@ public:
 	~MutantStack();
 
 public:
-	typedef iterator c::iterator;
+	typedef typename std::deque<T>::iterator iterator;
 	iterator begin();
 	iterator end();
 
