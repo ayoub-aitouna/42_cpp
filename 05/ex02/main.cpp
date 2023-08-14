@@ -11,7 +11,7 @@ int main()
         ShrubberyCreationForm form1("Shrubbery");
         RobotomyRequestForm form2("Robotomy");
         PresidentialPardonForm form3("President");
-
+        std::cout << bureaucrat;
         std::cout << "\n--------------- Form 1 ( Shrubbery ) ---------------" << std::endl;
         bureaucrat.signForm(form1);
         bureaucrat.executeForm(form1);

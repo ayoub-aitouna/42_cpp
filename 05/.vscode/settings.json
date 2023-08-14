@@ -64,6 +64,14 @@
         "deque": "cpp",
         "iomanip": "cpp",
         "stack": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "*.tcc": "cpp",
+        "clocale": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "memory_resource": "cpp",
+        "numeric": "cpp",
+        "numbers": "cpp",
+        "ranges": "cpp"
     }
 }
