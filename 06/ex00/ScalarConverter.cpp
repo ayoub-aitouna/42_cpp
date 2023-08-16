@@ -88,6 +88,7 @@ void ScalarConverter::convert(std::string initial_value)
 	int	type;
 
 	type = get_type(initial_value);
+	str = initial_value;
 	switch (type)
 	{
 	case T_CHAR:
