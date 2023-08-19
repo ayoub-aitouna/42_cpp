@@ -4,9 +4,11 @@
 #include "Array.hpp"
 #include <exception>
 #include <ostream>
+
 template <typename T>
 Array<T>::Array()
 {
+    this->m_size = 0;
     this->elememts = NULL;
 }
 
@@ -16,6 +18,7 @@ Array<T>::Array(unsigned int size)
     this->m_size = size;
     this->elememts = new T[size];
 }
+
 template <typename T>
 Array<T>::Array(Array &lhs)
 {
@@ -40,7 +43,7 @@ T &Array<T>::operator[](const size_t index)
 {
     if (this->elememts == NULL)
         return (this->default_value);
-    if (index >= m_size || index < 0)
+    if (index >= m_size)
         throw std::runtime_error("index out of bound exception");
     return this->elememts[index];
 }
@@ -51,7 +54,7 @@ std::ostream &operator<<(std::ostream &os, Array<T> &lhs)
     if (lhs.size() == 0)
         return (os);
     for (size_t i = 0; i < lhs.size(); i++)
-        std::cout << "a[" << i << "] = <" << lhs[i] << "> " << std::endl;
+        os << "a[" << i << "] = <" << lhs[i] << "> " << std::endl;
     return (os);
 }
 

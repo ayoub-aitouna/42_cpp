@@ -30,7 +30,7 @@ Base *generate(void)
 void identify(Base *p)
 {
     int type;
-    std::string types[] = {"NON", "A", "B", "C"};
+    std::string types[] = {"UnKnown", "A", "B", "C"};
     type = 0;
     if (dynamic_cast<A *>(p) != NULL)
         type = 1;
@@ -38,7 +38,7 @@ void identify(Base *p)
         type = 2;
     else if (dynamic_cast<C *>(p) != NULL)
         type = 3;
-    std::cout << "p is instance of type : " << types[type] << std::endl;
+    std::cout << "passed arguments is instance of type : " << types[type] << std::endl;
 }
 
 void identify(Base &p)
@@ -46,7 +46,7 @@ void identify(Base &p)
     try
     {
         dynamic_cast<A &>(p);
-        std::cout << "p is instance of type : A" << std::endl;
+        std::cout << "passed arguments is instance of type : A" << std::endl;
         return;
     }
     catch (const std::exception &e)
@@ -56,7 +56,7 @@ void identify(Base &p)
     try
     {
         dynamic_cast<B &>(p);
-        std::cout << "p is instance of type : B" << std::endl;
+        std::cout << "passed arguments is instance of type : B" << std::endl;
         return;
     }
     catch (const std::exception &e)
@@ -66,28 +66,58 @@ void identify(Base &p)
     try
     {
         dynamic_cast<C &>(p);
-        std::cout << "p is instance of type : C" << std::endl;
+        std::cout << "passed arguments is instance of type : C" << std::endl;
         return;
     }
     catch (const std::exception &e)
     {
     }
-    std::cout << "p has UnKnow  type : " << std::endl;
+    std::cout << "passed arguments has UnKnown type." << std::endl;
+}
+
+void ref_fun()
+{
+    Base *b = NULL;
+    b = generate();
+    identify(*b);
+    delete b;
+}
+
+
+void add_fun()
+{
+    Base *b = NULL;
+    b = generate();
+    identify(b);
+    delete b;
 }
 
 int main(void)
 {
     srand((unsigned)time(NULL));
-    identify(*generate());
-    identify(*generate());
-    identify(*generate());
-    identify(*generate());
-    identify(*generate());
+    std::cout << " ******************** USING REFERENCE ******************** " << std::endl;
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    ref_fun();
+    Base b;
+    identify(b);
+    
 
-    identify(generate());
-    identify(generate());
-    identify(generate());
-    identify(generate());
-    identify(generate());
+    std::cout << " ******************** USING PTR ******************** " << std::endl;
+    add_fun();
+    add_fun();
+    add_fun();
+    add_fun();
+    add_fun();
+    add_fun();
+    add_fun();
+    add_fun();
+    identify(NULL);
+    
     return (1);
 }

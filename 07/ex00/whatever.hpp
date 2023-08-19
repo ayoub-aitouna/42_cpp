@@ -1,3 +1,6 @@
+#ifndef WHATEVER_HPP
+#define WHATEVER_HPP
+
 template <typename T>
 void swap(T &t1, T &t2)
 {
@@ -18,3 +21,5 @@ T max(T t1, T t2)
 {
     return (t1 > t2 ? t1 : t2);
 }
+
+#endif

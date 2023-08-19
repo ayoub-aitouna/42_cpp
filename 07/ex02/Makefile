@@ -6,10 +6,15 @@ NAME = Array
 
 CPPFLAGS =  -Wall -Wextra -Werror -std=c++98
 
+CC = g++-11
+
 all : $(NAME)
 
+%.o : %.cpp
+	$(CC) $(CPPFLAGS) -c $< -o $@
+
 $(NAME) : $(OBJ)
-	c++ $(CPPFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean :
 	rm $(OBJ)

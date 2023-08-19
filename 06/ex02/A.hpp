@@ -12,7 +12,7 @@ public:
     ~A();
 
 private:
-    int id;
+    
 };
 
 #endif

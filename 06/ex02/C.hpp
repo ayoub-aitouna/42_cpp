@@ -11,7 +11,7 @@ public:
     ~C();
 
 private:
-    int id;
+   
 };
 
 #endif

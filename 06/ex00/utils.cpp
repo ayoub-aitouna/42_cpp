@@ -59,7 +59,7 @@ bool	double_type_validator(std::string str)
 
 int	get_type(std::string str)
 {
-	if (str.length() == 1 && std::isalpha(str[0]) && std::isprint(str[0]))
+	if (str.length() == 1 && (str[0] < 48 || str[0] > 57) && std::isprint(str[0]))
 		return (T_CHAR);
 	if (float_type_validator(str))
 		return (T_FLOAT);

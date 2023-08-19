@@ -21,6 +21,7 @@ class ScalarConverter
 	static int i_value;
 	static char c_value;
 	static std::string str;
+	static bool over_char;
 
   private:
 	ScalarConverter();

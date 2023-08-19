@@ -1,6 +1,7 @@
 #include "ScalarConverter.hpp"
 #include <cstdio>
 #include <cstdlib>
+#include <climits>
 #include <cstring>
 
 float ScalarConverter::f_value = 0;
@@ -8,6 +9,7 @@ double ScalarConverter::d_value = 0;
 int ScalarConverter::i_value = 0;
 char ScalarConverter::c_value = 0;
 std::string ScalarConverter::str = "";
+bool ScalarConverter::over_char = false;
 
 ScalarConverter::ScalarConverter()
 {
@@ -27,7 +29,7 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &lhs)
 void ScalarConverter::print_char()
 {
 	std::cout << "char: ";
-	if (is_pseudo_literals(str))
+	if (is_pseudo_literals(str) || over_char)
 		std::cout
 			<< "imposible" << std::endl;
 	else if (!std::isprint(c_value))
@@ -99,19 +101,28 @@ void ScalarConverter::convert(std::string initial_value)
 		break ;
 	case T_INT:
 		i_value = atoi(initial_value.c_str());
-		c_value = static_cast<char>(i_value);
+		if(i_value > CHAR_MAX || i_value < CHAR_MIN)
+			over_char = true;
+		else
+			c_value = static_cast<char>(i_value);
 		f_value = static_cast<float>(i_value);
 		d_value = static_cast<double>(i_value);
 		break ;
 	case T_FLOAT:
 		f_value = atof(initial_value.c_str());
-		c_value = static_cast<char>(f_value);
+		if(f_value > CHAR_MAX || f_value < CHAR_MIN)
+			over_char = true;
+		else
+			c_value = static_cast<char>(f_value);
 		i_value = static_cast<int>(f_value);
 		d_value = static_cast<double>(f_value);
 		break ;
 	case T_DOUBLE:
 		d_value = atof(initial_value.c_str());
-		c_value = static_cast<char>(d_value);
+		if(d_value > CHAR_MAX || d_value < CHAR_MIN)
+			over_char = true;
+		else
+			c_value = static_cast<char>(d_value);
 		i_value = static_cast<int>(d_value);
 		f_value = static_cast<float>(d_value);
 		break ;
@@ -122,8 +133,10 @@ void ScalarConverter::convert(std::string initial_value)
 	print_int();
 	print_float();
 	print_double();
+
 }
 
 ScalarConverter::~ScalarConverter()
 {
+	
 }

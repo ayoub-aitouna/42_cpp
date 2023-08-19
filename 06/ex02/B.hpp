@@ -10,7 +10,7 @@ public:
     ~B();
 
 private:
-    int id;
+    
 };
 
 #endif
