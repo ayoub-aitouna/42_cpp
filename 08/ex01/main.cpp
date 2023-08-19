@@ -11,11 +11,11 @@ int main()
         std::cout << "\n ----------- SUBJECT TEST -------------\n"
                   << std::endl;
         Span sp = Span(5);
-        sp.addNumber(6);
-        sp.addNumber(3);
-        sp.addNumber(17);
-        sp.addNumber(9);
-        sp.addNumber(11);
+        sp.addNumber(-1);
+        sp.addNumber(300);
+        sp.addNumber(301);
+        sp.addNumber(200);
+        sp.addNumber(2);
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;
     }

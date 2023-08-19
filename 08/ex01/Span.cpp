@@ -63,6 +63,7 @@ int Span::shortestSpan()
 	}
 	return (shortest_value);
 }
+
 int Span::longestSpan()
 {
 	sort();

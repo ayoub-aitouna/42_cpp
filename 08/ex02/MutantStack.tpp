@@ -3,39 +3,37 @@
 
 # include "MutantStack.hpp"
 
-template <typename T>
-MutantStack<T>::MutantStack()
+template <typename T, typename container>
+MutantStack<T, container >::MutantStack()
 {
 }
 
-template <typename T>
-MutantStack<T>::MutantStack(MutantStack &lhs)
+template <typename T, typename container>
+MutantStack<T, container >::MutantStack(MutantStack<T, container > &lhs)
 {
 	*this = lhs;
 }
 
-template <typename T>
-MutantStack<T> &MutantStack<T>::operator=(const MutantStack &lhs)
+template <typename T, typename container>
+MutantStack<T, container > &MutantStack<T, container>::operator=(const MutantStack &lhs)
 {
-	if (this != &lhs)
-	{
-		/* copy operator code*/
-	}
+	std::stack<T, container>::operator=(lhs);
 	return (*this);
 }
 
-template <typename T>
-MutantStack<T>::~MutantStack()
+template <typename T, typename container>
+MutantStack<T, container>::~MutantStack()
 {
 }
-template <typename T>
-typename MutantStack<T>::iterator MutantStack<T>::begin()
+
+template <typename T, typename container>
+typename MutantStack<T, container>::iterator MutantStack<T, container>::begin()
 {
 	return (this->c.begin());
 }
 
-template <typename T>
-typename MutantStack<T>::iterator MutantStack<T>::end()
+template <typename T, typename container>
+typename MutantStack<T, container>::iterator MutantStack<T, container>::end()
 {
 	return (this->c.end());
 }
