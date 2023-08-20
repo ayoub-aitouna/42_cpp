@@ -8,14 +8,12 @@
 #include <sstream>
 #include <cstdlib>
 
-
 struct date
 {
     int year;
     int month;
     int day;
 };
-
 
 class BitcoinExchange
 {
@@ -31,9 +29,11 @@ private:
     std::ifstream input_file;
     std::ifstream data_file;
     void load_data();
-    
+    void load_input_file();
+
 public:
     // public members here
 };
-
+void range();
+date valide_date_formate(std::string str);
 #endif
