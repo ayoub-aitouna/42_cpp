@@ -71,12 +71,26 @@ void BitcoinExchange::load_data()
 void BitcoinExchange::load_input_file()
 {
 	std::string line;
-	std::string date;
+	std::string str_date;
 	std::string value;
+	double btc_value;
 	std::istringstream m_stream;
+	date m_date;
 	
 	while (std::getline(this->input_file, line))
 	{
+		std::getline(m_stream, str_date, '|');
+		std::getline(m_stream, value);
+		try
+		{
+			m_date = valide_date_formate(str_date);
+			if (!value.empty())
+				btc_value = atof(value.c_str());
+		}
+		catch (const std::exception &e)
+		{
+		}
+		m_stream.clear();
 	}
 }
 
