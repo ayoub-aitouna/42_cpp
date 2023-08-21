@@ -72,23 +72,28 @@ void BitcoinExchange::load_input_file()
 {
 	std::string line;
 	std::string str_date;
+	std::string sep;
 	std::string value;
 	double btc_value;
 	std::istringstream m_stream;
 	date m_date;
-	
+
 	while (std::getline(this->input_file, line))
 	{
-		std::getline(m_stream, str_date, '|');
-		std::getline(m_stream, value);
+		m_stream.str(line);
+		m_stream >> str_date >> sep >> value;
 		try
 		{
 			m_date = valide_date_formate(str_date);
 			if (!value.empty())
 				btc_value = atof(value.c_str());
+			std::cout << str_date << " => "
+					  << btc_value << " * " << this->data[str_date]
+					  << " = " << this->data[str_date] * btc_value << std::endl;
 		}
 		catch (const std::exception &e)
 		{
+			std::cout << e.what() << std::endl;
 		}
 		m_stream.clear();
 	}
@@ -97,27 +102,6 @@ void BitcoinExchange::load_input_file()
 BitcoinExchange::~BitcoinExchange()
 {
 }
-
-// void f()
-// {
-
-// 	date m_date;
-// 	std::istringstream m_stream;
-// 	std::string token;
-// 	std::string line;
-
-// 	std::cout << line << std::endl;
-// 	m_stream.str(line);
-
-// 	std::getline(m_stream, token, '-');
-// 	m_date.year = get_value(token, 0, 2023);
-
-// 	std::getline(m_stream, token, '-');
-// 	m_date.month = get_value(token, 0, 12);
-
-// 	std::getline(m_stream, token, '-');
-// 	m_date.day = get_value(token, 0, 31);
-// }
 
 void range(int value, int min, int max)
 {
@@ -131,10 +115,10 @@ date valide_date_formate(std::string str)
 	std::istringstream ss(str);
 	char dash[2];
 	ss >> m_Date.year >> dash[0] >> m_Date.month >> dash[1] >> m_Date.day;
+	if (dash[0] != '-' || dash[1] != '-')
+		throw std::runtime_error("invalide Date Formate");
 	range(m_Date.year, 0, 2023);
 	range(m_Date.month, 0, 12);
 	range(m_Date.day, 0, 31);
-	if (dash[0] != '-' || dash[1] != '-')
-		throw std::runtime_error("invalide Date Formate");
 	return (m_Date);
 }
