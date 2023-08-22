@@ -20,10 +20,8 @@ public:
 
 private:
     std::stack<int> m_stack;
-    // private members here
 
 public:
-    // public members here
 };
 
 #endif

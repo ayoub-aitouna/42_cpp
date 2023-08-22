@@ -67,7 +67,7 @@ RPN &RPN::operator=(const RPN &lhs)
 {
 	if (this != &lhs)
 	{
-		/* copy operator code*/
+		this->m_stack = lhs.m_stack;
 	}
 	return (*this);
 }
