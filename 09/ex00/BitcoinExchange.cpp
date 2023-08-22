@@ -1,4 +1,5 @@
 #include "BitcoinExchange.hpp"
+#include <climits>
 
 BitcoinExchange::BitcoinExchange()
 {
@@ -12,8 +13,10 @@ BitcoinExchange::BitcoinExchange(std::string file_name)
 		std::cout << "couldn't open a file " << std::endl;
 		exit(1);
 	}
+	init_months_days();
 	load_data();
 	load_input_file();
+
 	// for (std::map<std::string, double>::iterator i = this->data.begin(); i != this->data.end(); i++)
 	// {
 	// 	std::cout << i->first  << " : " << i->second << std::endl;
@@ -76,7 +79,6 @@ void BitcoinExchange::load_input_file()
 	std::string value;
 	double btc_value;
 	std::istringstream m_stream;
-	date m_date;
 
 	while (std::getline(this->input_file, line))
 	{
@@ -84,12 +86,15 @@ void BitcoinExchange::load_input_file()
 		m_stream >> str_date >> sep >> value;
 		try
 		{
-			m_date = valide_date_formate(str_date);
-			if (!value.empty())
-				btc_value = atof(value.c_str());
+			check_formate("dddd-dd-dd | f", line);
+			valide_date_formate(str_date);
+			btc_value = atof(value.c_str());
+			range(btc_value, 0.0, 1000.0);
+			std::map<std::string, double>::iterator it = this->data.lower_bound(str_date);
+			if (it->first != str_date)
+				it--;
 			std::cout << str_date << " => "
-					  << btc_value << " * " << this->data[str_date]
-					  << " = " << this->data[str_date] * btc_value << std::endl;
+					  << it->second * btc_value << std::endl;
 		}
 		catch (const std::exception &e)
 		{
@@ -103,22 +108,79 @@ BitcoinExchange::~BitcoinExchange()
 {
 }
 
-void range(int value, int min, int max)
-{
-	if (value > max || value < min)
-		throw std::runtime_error("date value is out of range");
-}
-
-date valide_date_formate(std::string str)
+void BitcoinExchange::valide_date_formate(std::string str)
 {
 	date m_Date;
 	std::istringstream ss(str);
-	char dash[2];
-	ss >> m_Date.year >> dash[0] >> m_Date.month >> dash[1] >> m_Date.day;
-	if (dash[0] != '-' || dash[1] != '-')
-		throw std::runtime_error("invalide Date Formate");
-	range(m_Date.year, 0, 2023);
-	range(m_Date.month, 0, 12);
-	range(m_Date.day, 0, 31);
-	return (m_Date);
+	char dash;
+	ss >> m_Date.year >> dash >> m_Date.month >> dash >> m_Date.day;
+	range(m_Date.year, 2009, INT_MAX);
+	range(m_Date.month, 1, 12);
+	if (m_Date.month == 2)
+	{
+		if (m_Date.year % 4 == 0 && m_Date.year % 100 == 0 && m_Date.year % 400 == 0)
+			range(m_Date.day, 1, 29);
+		else
+			range(m_Date.day, 1, 28);
+	}
+	else
+		range(m_Date.day, 1, this->months_days[m_Date.month]);
+}
+
+void check_formate(std::string formate, std::string str)
+{
+	for (size_t i = 0; i < formate.size(); i++)
+	{
+		if (formate[i] == 'd')
+		{
+			if (!std::isdigit(str[i]))
+				throw std::runtime_error("invalide input formate ");
+		}
+		else if (formate[i] == 'f')
+		{
+			if (!is_double(&str[i]))
+				throw std::runtime_error("invalide input formate");
+		}
+		else
+		{
+			if (formate[i] != str[i])
+				throw std::runtime_error("invalide input formate");
+		}
+	}
+}
+
+bool is_double(std::string str)
+{
+	bool dot = false;
+	std::string::iterator it = str.begin();
+	if (*it == '-' || *it == '+')
+		it++;
+	while (it != str.end())
+	{
+		if (*it == '.')
+		{
+			if (dot)
+				return false;
+			dot = true;
+		}
+		else if (!std::isdigit(*it))
+			return false;
+		it++;
+	}
+	return (true);
+}
+
+void BitcoinExchange::init_months_days()
+{
+	this->months_days[1] = 31;
+	this->months_days[3] = 31;
+	this->months_days[4] = 30;
+	this->months_days[5] = 31;
+	this->months_days[6] = 30;
+	this->months_days[7] = 31;
+	this->months_days[8] = 31;
+	this->months_days[9] = 30;
+	this->months_days[10] = 31;
+	this->months_days[11] = 30;
+	this->months_days[12] = 31;
 }

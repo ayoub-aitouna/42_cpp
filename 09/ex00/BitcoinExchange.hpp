@@ -26,14 +26,24 @@ public:
 
 private:
     std::map<std::string, double> data;
+    std::map<int, int> months_days;
     std::ifstream input_file;
-    std::ifstream data_file;
     void load_data();
+    void init_months_days();
     void load_input_file();
+    void valide_date_formate(std::string str);
 
 public:
     // public members here
 };
-void range();
-date valide_date_formate(std::string str);
+
+template <typename T>
+void range(T value, T min, T max)
+{
+    if (value > max || value < min)
+        throw std::runtime_error("value is out of range");
+}
+
+bool is_double(std::string str);
+void check_formate(std::string str, std::string formate);
 #endif
