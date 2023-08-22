@@ -21,29 +21,36 @@ RPN::RPN(std::string expresion)
 		{
 			if (this->m_stack.size() < 2)
 				throw std::runtime_error("invalide operation");
-			this->m_stack.push(stack_top() * stack_top());
+			int n1 = stack_top();
+			int n2 = stack_top();
+			this->m_stack.push(n2 * n1);
 		}
 		else if (expresion[i] == '/')
 		{
 			if (this->m_stack.size() < 2)
 				throw std::runtime_error("invalide operation");
-			this->m_stack.push(stack_top() / stack_top());
+			int n1 = stack_top();
+			int n2 = stack_top();
+			this->m_stack.push(n2 / n1);
 		}
 		else if (expresion[i] == '+')
 		{
 			if (this->m_stack.size() < 2)
 				throw std::runtime_error("invalide operation");
-			this->m_stack.push(stack_top() + stack_top());
+			int n1 = stack_top();
+			int n2 = stack_top();
+			this->m_stack.push(n2 + n1);
 		}
 		else if (expresion[i] == '-')
 		{
 			if (this->m_stack.size() < 2)
 				throw std::runtime_error("invalide operation");
-			this->m_stack.push(stack_top() - stack_top());
+			int n1 = stack_top();
+			int n2 = stack_top();
+			this->m_stack.push(n2 - n1);
 		}
 		else if (expresion[i] != ' ')
 		{
-			std::cout << expresion[i] << std::endl;
 			throw std::runtime_error("Error");
 		}
 	}
