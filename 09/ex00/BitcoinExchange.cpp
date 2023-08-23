@@ -16,11 +16,6 @@ BitcoinExchange::BitcoinExchange(std::string file_name)
 	init_months_days();
 	load_data();
 	load_input_file();
-
-	// for (std::map<std::string, double>::iterator i = this->data.begin(); i != this->data.end(); i++)
-	// {
-	// 	std::cout << i->first  << " : " << i->second << std::endl;
-	// }
 }
 
 BitcoinExchange::BitcoinExchange(BitcoinExchange &lhs)
@@ -49,6 +44,7 @@ void BitcoinExchange::load_data()
 		std::cout << "Download Necessary Files and include them in the Makefile derectory \n"
 					 "Files URL : https://cdn.intra.42.fr/document/document/16358/cpp_09.tgz"
 				  << std::endl;
+		exit(1);
 	}
 	while (std::getline(data_file, line))
 	{
@@ -134,17 +130,17 @@ void check_formate(std::string formate, std::string str)
 		if (formate[i] == 'd')
 		{
 			if (!std::isdigit(str[i]))
-				throw std::runtime_error("invalide input formate ");
+				throw std::runtime_error("Error: bad input => " + str);
 		}
 		else if (formate[i] == 'f')
 		{
 			if (!is_double(&str[i]))
-				throw std::runtime_error("invalide input formate");
+				throw std::runtime_error("Error: bad input => " + str);
 		}
 		else
 		{
 			if (formate[i] != str[i])
-				throw std::runtime_error("invalide input formate");
+				throw std::runtime_error("Error: bad input => " + str);
 		}
 	}
 }

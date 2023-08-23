@@ -40,8 +40,12 @@ public:
 template <typename T>
 void range(T value, T min, T max)
 {
-    if (value > max || value < min)
-        throw std::runtime_error("value is out of range");
+    if (value < 0)
+        throw std::runtime_error("Error: not a positive number.");
+    if (value > max)
+        throw std::runtime_error("Error: too large a number.");
+    if (value < min)
+        throw std::runtime_error("Error: too small a number.");
 }
 
 bool is_double(std::string str);
