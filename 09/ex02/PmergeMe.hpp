@@ -3,18 +3,22 @@
 
 #include <iostream>
 #include <vector>
-#include <list>
+#include <deque>
+#include <cstdlib>
 
 class PmergeMe
 {
 public:
     PmergeMe();
+    PmergeMe(int ac, char** list);
     PmergeMe(PmergeMe &lhs);
     PmergeMe &operator=(const PmergeMe &lhs);
+    void marge_sort();
     ~PmergeMe();
 
 private:
-    std::vector<int> m_vector_set;
+    std::vector<int> m_vector;
+    std::deque<int>  m_deque;
 };
 
 #endif
